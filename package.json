@@ -1,7 +1,7 @@
 {
-    "name": ":package_name",
+    "name": "jarvis",
     "version": "1.0.0",
-    "description": ":package_description",
+    "description": "A simple and smart theme management package for Laravel",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,20 +19,20 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/:vendor/:package_name.git"
+        "url": "git+https://github.com/shawnsandy/jarvis.git"
     },
     "authors": [{
-        "name": ":author_name",
-        "email": ":author_email",
-        "homepage": ":author_website",
+        "name": "Shawn Sandy",
+        "email": "shawnsandy04@gmail.com",
+        "homepage": "https://github.com/shawnsandy",
         "role": "Developer"
     }],
     "author": "shawn sandy <shawnsandy04@gmail.com>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/:vendor/:package_name/issues"
+        "url": "https://github.com/shawnsandy/jarvis/issues"
     },
-    "homepage": "https://github.com/:vendor/:package_name#readme",
+    "homepage": "https://github.com/shawnsandy/jarvis#readme",
     "devDependencies": {
         "aos": "^2.0.4",
         "autoprefixer": "^6.4.0",
