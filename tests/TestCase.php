@@ -1,6 +1,6 @@
 <?php
 
-namespace :namespace;
+namespace ShawnSandy\Jarvis;
 
 class TestCase extends Orchestra\Testbench\BrowserKit\TestCase
 {
@@ -21,7 +21,7 @@ class TestCase extends Orchestra\Testbench\BrowserKit\TestCase
 
 	protected function getPackageProviders($app)
 	{
-		return [':namespace\:providerServicesProvider'];
+		return ['ShawnSandy\Jarvis\JarvisServicesProvider'];
 	}
 
 }

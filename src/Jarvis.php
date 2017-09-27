@@ -6,10 +6,10 @@
      * Time: 10:03 PM
      */
 
-    namespace :namespace;
+    namespace ShawnSandy\Jarvis;
 
 
-    class :provider
+    class Jarvis
     {
 
         public function routes(){

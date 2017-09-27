@@ -6,21 +6,21 @@
      * Time: 10:15 PM
      */
 
-    namespace :namespace;
+    namespace ShawnSandy\Jarvis;
 
 
 
 
     use Illuminate\Support\Facades\Facade;
 
-    class :providerFacade extends Facade
+    class JarvisFacade extends Facade
     {
 
         /**
          *
          */
         protected static function  getFacadeAccessor() {
-            return ":provider";
+            return "Jarvis";
         }
 
     }

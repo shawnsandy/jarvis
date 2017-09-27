@@ -1,6 +1,6 @@
 <?php
 
-namespace :namespace;
+namespace ShawnSandy\Jarvis;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
@@ -12,9 +12,9 @@ use Illuminate\Database\Eloquent\Factory;
 
 /**
 lass Provider
- * @package :namespace
+ * @package ShawnSandy\Jarvis
  */
-class :providerThemesProvider extends ServiceProvider
+class JarvisThemesProvider extends ServiceProvider
 {
 
 
@@ -38,11 +38,11 @@ class :providerThemesProvider extends ServiceProvider
 		/**
 		* Package views
 										         */
-										        $this->loadViewsFrom(__DIR__ . '/resources/views', ':package_name');
+										        $this->loadViewsFrom(__DIR__ . '/resources/views', 'jarvis');
 		$this->publishes(
 										            [
-										                __DIR__ . '/resources/views' => resource_path('views/vendor/:package_name'),
-										            ], ':package_name-views'
+										                __DIR__ . '/resources/views' => resource_path('views/vendor/jarvis'),
+										            ], 'jarvis-views'
 										        );
 
 
@@ -55,9 +55,9 @@ class :providerThemesProvider extends ServiceProvider
 										         */
 										        $this->publishes(
 										            [
-										                __DIR__.'/resources/assets/js/' => public_path('assets/:package_name/js/'),
+										                __DIR__.'/resources/assets/js/' => public_path('assets/jarvis/js/'),
 										                __DIR__.'/public/assets/' => public_path('assets/')
-										            ], ':package_name-assets'
+										            ], 'jarvis-assets'
 										        );
 		);
 
@@ -71,8 +71,8 @@ class :providerThemesProvider extends ServiceProvider
 										         */
 										        $this->publishes(
 										            [
-										                __DIR__.'/resources/assets/' => resource_path('assets/:package_name/'),
-										            ], ':package_name-resources'
+										                __DIR__.'/resources/assets/' => resource_path('assets/jarvis/'),
+										            ], 'jarvis-resources'
 										        );
 
 
@@ -84,29 +84,29 @@ class :providerThemesProvider extends ServiceProvider
 		* Package config
 										         */
 										        $this->publishes(
-										            [__DIR__ . '/config/config.php' => config_path(':package_name.php')],
-										            ':package_name-config'
+										            [__DIR__ . '/config/config.php' => config_path('jarvis.php')],
+										            'jarvis-config'
 										        );
 
 		$this->publishes([
 												            __DIR__ . '/migrations/' => database_path('migrations')
-												        ], ':package_name-migrations');
+												        ], 'jarvis-migrations');
 
 
 		$this->loadMigrationsFrom(__DIR__ . '/migrations');
 		$this->app->bind(
-								        ':provider', function () {
-			return new :provider();
+								        'Jarvis', function () {
+			return new Jarvis();
 		}
 		);
 
 		$this->registerFactoriesPath(__DIR__.'/factories');
 
 		$views = resource_path(
-						            "views/themes/:package_name"
+						            "views/themes/jarvis"
 						        );
 
-		$this->loadViewsFrom($views, ':package_name');
+		$this->loadViewsFrom($views, 'jarvis');
 
 
 
@@ -153,12 +153,12 @@ class :providerThemesProvider extends ServiceProvider
 					    {
 
 		$this->mergeConfigFrom(
-										            __DIR__ . '/config/config.php', ':package_name'
+										            __DIR__ . '/config/config.php', 'jarvis'
 										        );
 
 		$this->app->bind(
-										        ':provider', function () {
-			return new :provider();
+										        'Jarvis', function () {
+			return new Jarvis();
 		}
 		);
 	}

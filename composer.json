@@ -1,17 +1,17 @@
 {
-    "name": ":vendor/:package_name",
+    "name": "shawnsandy/jarvis",
     "type": "library",
-    "description": ":package_description",
+    "description": "A simple and smart theme management package for Laravel",
     "keywords": [
-        ":vendor",
-        ":package_name"
+        "shawnsandy",
+        "jarvis"
     ],
-    "homepage": "https://github.com/:vendor/:package_name",
+    "homepage": "https://github.com/shawnsandy/jarvis",
     "license": "MIT",
     "authors": [{
-        "name": ":author_name",
-        "email": ":author_email",
-        "homepage": ":author_website",
+        "name": "Shawn Sandy",
+        "email": "shawnsandy04@gmail.com",
+        "homepage": "https://github.com/shawnsandy",
         "role": "Developer"
     }],
     "require": {
@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            ":vendor\\:package_name\\": "src"
+            "ShawnSandy\\Jarvis\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            ":vendor\\:package_name\\": "tests"
+            "ShawnSandy\\Jarvis\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +50,10 @@
       "extra": {
           "laravel": {
               "providers": [
-                 //":namespace\\:providerServicesProvider"
+                 //"ShawnSandy\Jarvis\\JarvisServicesProvider"
               ],
               "aliases": {
-                  //":provider": ":namespace\\:providerFacade"
+                  //"Jarvis": "ShawnSandy\Jarvis\\JarvisFacade"
               }
           }
 

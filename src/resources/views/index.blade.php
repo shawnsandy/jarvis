@@ -1,5 +1,5 @@
-@extends(':package_name::layouts.layout')
-@section('title', ':package_name')
+@extends('jarvis::layouts.layout')
+@section('title', 'jarvis')
 @section('content')
-  @include(':package_name::index')
+  @include('jarvis::index')
 @endsection
