@@ -7,16 +7,11 @@ use Illuminate\Database\Eloquent\Factory;
 
 
 /**
-ss Provider
+* Service Provider
  * @package ShawnSandy\Jarvis
  */
 class JarvisThemesProvider extends ServiceProvider
 {
-
-
-
-
-
 
 
 	/**
@@ -26,12 +21,6 @@ class JarvisThemesProvider extends ServiceProvider
 	                             */
 	    public function boot()
 	    {
-
-
-
-
-
-
 
 
 
@@ -47,27 +36,14 @@ class JarvisThemesProvider extends ServiceProvider
 
 
 
-
-
-
-
-
 		/**
 		* Package assets
 		                                                         */
 		        $this->publishes(
 		            [
-		                __DIR__.'/resources/assets/js/' => public_path('assets/jarvis/js/'),
 		                __DIR__.'/public/' => public_path('jarvis'),
 		            ], 'jarvis-assets'
 		        );
-
-
-
-
-
-
-
 
 
 		/**
@@ -78,11 +54,6 @@ class JarvisThemesProvider extends ServiceProvider
 		                __DIR__.'/resources/assets/' => resource_path('assets/jarvis/'),
 		            ], 'jarvis-resources'
 		        );
-
-
-
-
-
 
 
 
@@ -116,12 +87,6 @@ class JarvisThemesProvider extends ServiceProvider
 	}
 
 
-
-
-
-
-
-
 	/**
 	* Register factories.
 	                        *
@@ -141,11 +106,6 @@ class JarvisThemesProvider extends ServiceProvider
 		                                                            include_once __DIR__ . '/Helpers/helper.php';
 		endif;
 	}
-
-
-
-
-
 
 
 

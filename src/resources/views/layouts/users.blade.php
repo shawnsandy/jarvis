@@ -31,17 +31,16 @@
 
 
 
-
     <main>
         <div class="columns is-marginless">
             <div class="column is-paddingless">
 
                 <div class="hero is-fullheight">
+
                     <nav class="navbar is-transparent">
                         <div class="navbar-menu navbar-center">
                             <div class="navbar-start">
-                                <a href="" class="navbar-item"><i class="im im-angle-left default"></i> Frontend</a>
-                                <a href="" class="navbar-item"><i class="im im-users default"></i> Profile</a>
+
                             </div>
 
                             <div class="navbar-end">
@@ -50,12 +49,24 @@
 
                         </div>
                     </nav>
+
                 </div>
 
             </div>
+            <div class="column is-paddingless is-three-quaters side-bar">
+
+                <div class="hero is-fullheight">
+                    <div class="hero-body">
+                        <div class="container">
 
 
+                            @yield('content')
 
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
 

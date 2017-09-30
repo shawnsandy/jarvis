@@ -16,30 +16,35 @@ var git = require("gulp-git");
 var replace = require("gulp-ext-replace");
 var print = require("gulp-print");
 var replace_txt = require("gulp-replace");
+var cssnano = require("gulp-cssnano");
 var config = require("./config.js");
 
+
+/**
+ * process files sass
+ * */
 gulp.task("sass", function() {
   return gulp
-    .src("./src/resources/assets/**/*.scss", {
-      base: "./src/resources/assets/"
-    })
-    .pipe(changed("./src/resources/assets/**/*.scss"))
-    .pipe(sass().on("error", notify.onError("Error: <%= error.message %>")))
-    .pipe(gulp.dest("./src/resources/assets"))
-    .pipe(
-      notify({
-        title: "Pages Notification",
+    .src("./src/scss/**/*.scss", { base: "./src/scss/" })
+    .pipe(changed("./src/scss/**/*.scss"))
+    .pipe(sass().on("error", sass.logError))
+    .pipe(cssnano())
+    .pipe(gulp.dest("./src/public/css"))
+    .pipe(print())
+    .pipe(notify({
+        title: "Task Completed",
         message: "SCSS files compiled, enjoy",
         onLast: true
-      })
-    );
+      }));
 });
 
-gulp.task("package", function() {
-  return gulp
-    .src("./src/resources/assets/**/*.*", { base: "./src/resources/assets/" })
-    .pipe(changed("./src/resources/assets/**/*.*"))
-    .pipe(gulp.dest("../../resources/assets/:package_name"));
+
+/**
+ * watch sass files
+ * run sass task on change
+ */
+gulp.task("sass:watch", function() {
+  gulp.watch("./src/scss", ["sass"]);
 });
 
 gulp.task("clone:html", function() {
@@ -59,6 +64,10 @@ gulp.task("clone:html", function() {
   );
 });
 
+
+/**
+ * run import task
+ */
 gulp.task(
   "imports",
   ["import:views", "import:partials", "import:assets"],
@@ -102,11 +111,18 @@ gulp.task("import:partials", function() {
  */
 gulp.task("import:assets", function() {
   return gulp
-    .src(["./html/theme/public/**/*.css", "./html/theme/public/**/*.js"], {
+    .src(["./html/theme/public/css/**/*.css", "./html/theme/public/js/**/*.js"], {
       base: "./html/theme/public"
     })
     .pipe(gulp.dest("./src/public"))
     .pipe(print());
 });
+
+
+gulp.task("import:sass", function(){
+    return gulp.src(["./html/src/stylesheets/**/*.scss"], {"base": "./html/src/stylesheets"})
+    .pipe(gulp.dest("./src/scss"))
+    .pipe(print());
+})
 
 gulp.task("default", ["imports"], function() {});
