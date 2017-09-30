@@ -62,6 +62,7 @@
         "underscore": "^1.8.3"
     },
     "dependencies": {
-        "gulp-cssnano": "^2.1.2"
+        "gulp-cssnano": "^2.1.2",
+        "gulp-sizereport": "^1.2.0"
     }
 }
