@@ -31,7 +31,9 @@ gulp.task("sass", function() {
     .pipe(sass().on("error", sass.logError))
     .pipe(cssnano())
     .pipe(gulp.dest("./src/public/css"))
-    .pipe(reports())
+    .pipe(reports({
+                    gzip: true
+                  }))
     .pipe(notify({
         title: "Task Completed",
         message: "SCSS files compiled, enjoy",
