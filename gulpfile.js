@@ -18,6 +18,7 @@ var print = require("gulp-print");
 var replace_txt = require("gulp-replace");
 var cssnano = require("gulp-cssnano");
 var config = require("./config.js");
+var reports = require("gulp-sizereport");
 
 
 /**
@@ -30,7 +31,7 @@ gulp.task("sass", function() {
     .pipe(sass().on("error", sass.logError))
     .pipe(cssnano())
     .pipe(gulp.dest("./src/public/css"))
-    .pipe(print())
+    .pipe(reports())
     .pipe(notify({
         title: "Task Completed",
         message: "SCSS files compiled, enjoy",
