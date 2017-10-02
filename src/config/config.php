@@ -1,11 +1,12 @@
 <?php
 
 return [
-    'theme' => [
-        'author' => "your name",
-        'email' => "your email",
-        'website' => "your website",
-        "options" => []
-        ]
+    "default" => [
+       "author" => "your name",
+       "email" => "your email",
+       "website" => "your website",
+       "options" => [],
+       "fields" => []
+     ]
 ];
 

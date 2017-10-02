@@ -1,0 +1,32 @@
+.login-page {
+    color: lightgray;
+    @include gradient(darken($sidebar_background, 5%), darken($sidebar_background, 50%));
+    .side-bar {
+        background-color: $black-haze;
+    }
+    label {
+        color: gray;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    input,
+    textarea,
+    select {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px dashed gray;
+        border-radius: 0;
+
+
+    }
+    .navbar {
+        background-color: transparent;
+        a {
+            color: $black-haze;
+        }
+    }
+
+
+
+
+}
