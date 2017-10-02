@@ -1,6 +1,5 @@
-@extends('jarvis::layouts.dashboard')
-@section('content')
-    <div class="widgets">
+
+<div class="widgets">
 	<div class="columns">
 		<div class="column">
 			<div class="cards">
@@ -113,5 +112,3 @@
 
 	</div>
 </section>
-
-@endsection

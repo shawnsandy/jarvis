@@ -9,6 +9,7 @@
   
   
   </title>
+
    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   <link href="/jarvis/css/blokkfont-b2e761c39d.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.2.0/css/iconmonstr-iconic-font.min.css">
@@ -28,8 +29,12 @@
 
 <body class="front-page">
 
+<!-- content -->
 
-  
+ 
+
+
+<!-- content -->
 
 <main class="section is-medium">
     <div class="container">
@@ -52,10 +57,15 @@
     </div>
 </main>
 
+<!-- endcontent -->
 
+
+
+
+<!-- endcontent -->
 
   
-   <script src="/jarvis/js/app-ffa8a6e839961c181f2c.js"></script>
+   <script src="/jarvis/js/app-9404c5cacab7b51c5819.js"></script>
 
   
 

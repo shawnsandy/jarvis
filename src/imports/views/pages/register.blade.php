@@ -7,16 +7,16 @@
 				<nav class="navbar is-transparent">
 	<div class="navbar-menu navbar-center">
 		<div class="navbar-start">
-			<a href="" class="navbar-item"><i class="im im-angle-left default"></i> Frontend</a>
-			<a href="" class="navbar-item"><i class="im im-users default"></i> Profile</a>
+
 		</div>
 
 		<div class="navbar-end">
-
+			
 		</div>
 
 	</div>
 </nav>
+
 			</div>
 
 		</div>

@@ -7,7 +7,7 @@
   <title>
       
   </title>
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   <link href="/jarvis/css/blokkfont-b2e761c39d.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.2.0/css/iconmonstr-iconic-font.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -16,13 +16,12 @@
   <link rel="stylesheet" href="/jarvis/css/demo-b6a6c8cd86.css">
 
  <link rel="stylesheet" href="/jarvis/css/theme-4374b24fa0.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <!-- Generate using http://realfavicongenerator.net/ -->
+  <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Generate using http://realfavicongenerator.net/ -->
 
-
-  
+ 
 </head>
 
 <body id="body" class="collections-page frontend">
@@ -53,7 +52,10 @@
         A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
       </h2>
     </div>
-  </section>  <section class="cover-fold">
+  </section>
+  <!-- content -->
+
+   <section class="cover-fold">
     <div class="cover">
         <div>
             <div class="has-text-centered">
@@ -75,6 +77,7 @@
 
 </section>
 
+<!-- content -->
 
 <section class="section featured is-medium">
 <div class="container">
@@ -402,7 +405,13 @@
 </section>
 
 
- <footer class="footer section">
+<!-- endcontent -->
+
+
+
+
+  <!-- endcontent -->
+  <footer class="footer section">
 
   <div class="container">
     <div class="columns">
@@ -448,9 +457,8 @@
 </footer>
 
  
-  <script src="/jarvis/js/app-ffa8a6e839961c181f2c.js"></script>
- 
-  
+  <script src="/jarvis/js/app-9404c5cacab7b51c5819.js"></script>
+   
 </body>
 
 </html>

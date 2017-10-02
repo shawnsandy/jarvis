@@ -9,6 +9,7 @@
   
   
   </title>
+
    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   <link href="/jarvis/css/blokkfont-b2e761c39d.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.2.0/css/iconmonstr-iconic-font.min.css">
@@ -29,8 +30,10 @@
 
 <body class="login-page">
 
+<!-- content -->
 
-  
+ 
+<!-- content -->
 
 <main>
 	<div class="columns is-marginless">
@@ -41,8 +44,7 @@
 				<nav class="navbar is-transparent">
 	<div class="navbar-menu navbar-center">
 		<div class="navbar-start">
-			<a href="" class="navbar-item"><i class="im im-angle-left default"></i> Frontend</a>
-			<a href="" class="navbar-item"><i class="im im-users default"></i> Profile</a>
+
 		</div>
 
 		<div class="navbar-end">
@@ -51,6 +53,7 @@
 
 	</div>
 </nav>
+
 
 			</div>
 
@@ -120,11 +123,16 @@
 
 </main>
 
+<!-- endcontent -->
 
 
+
+
+
+<!-- endcontent -->
 
   
-   <script src="/jarvis/js/app-ffa8a6e839961c181f2c.js"></script>
+   <script src="/jarvis/js/app-9404c5cacab7b51c5819.js"></script>
 
   
 

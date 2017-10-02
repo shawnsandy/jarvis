@@ -7,7 +7,7 @@
   <title>
       
   </title>
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   <link href="/jarvis/css/blokkfont-b2e761c39d.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.2.0/css/iconmonstr-iconic-font.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="/jarvis/css/theme-4374b24fa0.css">
 
  <link rel="stylesheet" href="/jarvis/css/admin-070a62256f.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 
 
   <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Generate using http://realfavicongenerator.net/ -->
@@ -84,7 +86,7 @@
             <div class="navbar-brand">
               <a href="/dashboard.html" class="navbar-item"> <i class="im im-radio-button-circle"></i> </a>
               <div class="navbar-item is-uppercase subtitle is-3 dashboard-name">
-              Dashboard
+                Dashboard
               </div>
             </div>
             <div class="navbar-menu">
@@ -101,20 +103,24 @@
           </nav>
 
           <div class="dashboard">
-          <div class="container-fluid">
-          <div class="section columns">
-            <div class="column">
-            <nav class="breadcrumb has-dot-separator" aria-label="breadcrumbs">
+            <div class="container-fluid">
+              <div class="section columns">
+                <div class="column">
+                  <nav class="breadcrumb has-dot-separator" aria-label="breadcrumbs">
   <ul>
     <li><a href="#">Dashboard</a></li>
     <li class="is-active"><a href="#" aria-current="page">Page</a></li>
   </ul>
 </nav>
 
+                </div>
+              </div>
             </div>
-          </div>
-          </div>
-          
+            <!-- content -->
+
+            
+
+<!-- content -->
 
 
 <div class="widgets">
@@ -232,6 +238,12 @@
 </section>
 
 
+<!-- endcontent -->
+
+
+
+
+            <!-- endcontent -->
 
           </div>
 
@@ -242,8 +254,8 @@
   </section>
 
    
-  <script src="/jarvis/js/app-ffa8a6e839961c181f2c.js"></script>
-  <script src="/jarvis/js/admin-ffa8a6e839961c181f2c.js"></script>
+  <script src="/jarvis/js/app-9404c5cacab7b51c5819.js"></script>
+  <script src="/jarvis/js/admin-9404c5cacab7b51c5819.js"></script>
 
 
    

@@ -7,3 +7,4 @@
   <link rel="stylesheet" href="/jarvis/css/demo-b6a6c8cd86.css">
 
  <link rel="stylesheet" href="/jarvis/css/theme-4374b24fa0.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">

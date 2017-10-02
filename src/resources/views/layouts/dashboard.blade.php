@@ -11,12 +11,8 @@
     <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.2.0/css/iconmonstr-iconic-font.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/jarvis/css/app-e787fe0d66.css">
-    <link rel="stylesheet" href="/jarvis/css/demo-b6a6c8cd86.css">
 
-    <link rel="stylesheet" href="/jarvis/css/theme-4374b24fa0.css">
-
-    <link rel="stylesheet" href="/jarvis/css/admin-070a62256f.css">
+    @include('jarvis::partials.admin-header')
 
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -125,9 +121,7 @@
 
     </section>
 
-
-    <script src="/jarvis/js/app-ffa8a6e839961c181f2c.js"></script>
-    <script src="/jarvis/js/admin-ffa8a6e839961c181f2c.js"></script>
+@include('jarvis::partials.admin-footer')
 
 
 
