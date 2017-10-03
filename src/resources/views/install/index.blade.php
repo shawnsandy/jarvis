@@ -47,10 +47,9 @@
             <div class="column is-paddingless">
                 <section class="section">
                     <div class="container-fluid">
-                        <h3 class="subtitle is-3">
-                            Theme Admin
-                        </h3>
-
+                        <p class="subtitle is-4">
+                          <i class="fa fa-cogs"></i>  Theme Settings
+                        </p>
                     </div>
                 </section>
             </div>
