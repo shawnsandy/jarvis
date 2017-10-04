@@ -208,15 +208,14 @@
         <script>
             AOS.init();
 
-            u(".button").on("mouseover", function(e) {
-                var animationEnded = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
-                let elm  = e.currentTarget ;
-                u(elm).addClass("animated pulse").on(animationEnded, function(animationEnded){
-                   u(elm).removeClass("animated pulse")
+            u(".button").on("mouseover", function (e) {
+                var animationEnded =
+                    "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+                let elm = e.currentTarget;
+                u(elm).addClass("animated pulse").on(animationEnded, function (animationEnded) {
+                    u(elm).removeClass("animated pulse")
                 })
             })
-
-
 
         </script>
 </body>
