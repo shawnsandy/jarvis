@@ -29,9 +29,9 @@
             background-color: #252525;
         }
 
-        .oswald {
+        .headliners {
 
-            font-family: 'Oswald', sans-serif;
+            font-family: 'oswald', sans-serif;
         }
 
         .open-sans {
