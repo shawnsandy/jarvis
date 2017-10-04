@@ -3,6 +3,7 @@
 return [
     "name" => "Jarvis",
     "description" => "A simple theme management toolkit",
+    "version" => "1.0",
     "theme" =>
         [ "default" => [
 
