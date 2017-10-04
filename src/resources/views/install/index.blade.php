@@ -82,14 +82,43 @@
 
             <div class="column is-one-quarter is-paddingless">
                 <div class="hero is-fullheight sidebar wrappers">
-                    <div class="">
-                        <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-                            <div class="navbar-item subtitle is-4 is-uppercase oswald has-text-centered">
-                                <span class="icon is-medium"><i class="icon ion-gear-a"></i></span> {{ config("jarvis.name")
-                                }} V{{ config("jarvis.version") }}
+
+                    <div class="hero-head">
+                        <div class="container-fluid">
+                            <img src="https://source.unsplash.com/JVSgcV8_vb4/600x320" alt="" class="image">
+                            <nav>
+                                <div class="container toolbar">
+                                    <div class="flex-center is-5">
+                                    <p class="headliners is-uppercase">
+                                        <span class="icon is-large"><i class="icon ion-gear-a"></i></span>
+                                        <span class="headliners subtitle">{{ config("jarvis.name") }} V{{ config("jarvis.version") }}</span>
+                                    </p>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="hero-body">
+
+
+
+                    </div>
+
+                    <div class="hero-foot">
+                        <div class="section">
+                            <div class="content has-text-centered">
+
+                                <p class="author">
+                                    Built by: {{ config("jarvis.theme.default.author") }}
+                                </p>
+                                <p class="is-5">
+                                    Powered by Laravel {{ App::version() }}
+                                </p>
+
                             </div>
-                        </nav>
-                         <img src="https://source.unsplash.com/JVSgcV8_vb4/600x320" alt="" class="image">
+                        </div>
+
                     </div>
 
                 </div>
