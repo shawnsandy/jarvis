@@ -7,9 +7,9 @@ return [
     "theme" =>
         [ "default" => [
 
-        "author" => "your name",
-        "email" => "your email",
-        "website" => "your website",
+        "author" => "Shawn Sandy",
+        "email" => "shawnsandy04@gmail.com",
+        "website" => "theme website",
         "options" => [],
         "fields" => []
         ]
