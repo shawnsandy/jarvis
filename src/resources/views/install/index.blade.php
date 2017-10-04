@@ -42,7 +42,7 @@
         a.button {
             text-transform: uppercase;
             font-weight: normal;
-            font-family: 'Oswald', sans-serif;
+            font-family: 'oswald', sans-serif;
             border-radius: 25px;
             text-decoration: none;
         }
@@ -52,7 +52,15 @@
             text-decoration: underline;
         }
 
-        .navbar-item.subtitle {
+
+        .toolbar {
+            height: 80px;
+            padding: 0 20px;
+            background-color: #1f1f1f;
+        }
+
+
+        .hero.nav.subtitle {
             color: #fff;
         }
 
@@ -67,9 +75,25 @@
 
         .wrappers {
             height: 100vh;
-            overflow: auto ;
+            overflow: auto;
         }
 
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+
+        .flex-right {
+            justify-content: right;
+        }
+
+
+        .flex-left {
+            justify-content: left;
+        }
 
     </style>
 </head>
@@ -87,12 +111,14 @@
                         <div class="container-fluid">
                             <img src="https://source.unsplash.com/JVSgcV8_vb4/600x320" alt="" class="image">
                             <nav>
-                                <div class="container toolbar">
-                                    <div class="flex-center is-5">
-                                    <p class="headliners is-uppercase">
-                                        <span class="icon is-large"><i class="icon ion-gear-a"></i></span>
-                                        <span class="headliners subtitle">{{ config("jarvis.name") }} V{{ config("jarvis.version") }}</span>
-                                    </p>
+                                <div class="container-fluid toolbar">
+                                    <div class="flex-center flex-left">
+                                        <div class="headliners is-uppercase subtitle is-2 has-text-centered">
+                                            <span class="icon is-medium"><i class="ion-gear-a"></i></span>
+                                            <span class="">
+                                        {{ config("jarvis.name") }} <span class="is-size-4">V{{ config("jarvis.version") }}</span>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </nav>
@@ -107,13 +133,11 @@
 
                     <div class="hero-foot">
                         <div class="section">
-                            <div class="content has-text-centered">
+                            <div class="content is-small has-text-centered">
 
-                                <p class="author">
-                                    Built by: {{ config("jarvis.theme.default.author") }}
-                                </p>
-                                <p class="is-5">
-                                    Powered by Laravel {{ App::version() }}
+                                <p class="is-uppercase">
+                                    <span class="author"> Built by: {{ config("jarvis.theme.default.author") }}</span> |
+                                    <span class="larevel-credits">Powered by Laravel {{ App::version() }}</span>
                                 </p>
 
                             </div>
@@ -138,16 +162,16 @@
 
                                     <div class="container-fluid">
 
-                                        <p class="subtitle is-1 oswald is-uppercase">
+                                        <p class="subtitle is-2 headliners is-uppercase">
                                             <i class="fa fa-quote-left"></i> Whoops! It appears that we have not been formally
                                             introduced, lets fix that.
                                         </p>
                                         <hr>
 
                                         <p class="subtitle is-4">
-                                            Hi I'm {{ config("jarvis.name") }} V{{ config("jarvis.version") }}, a simple and smart way to manage your laravel views (themes)
-                                            built with the Jarvis toolkit, thats me :)-
-                                            <a href="">Github repo</a>.
+                                            Hi I'm {{ config("jarvis.name") }} V{{ config("jarvis.version") }}, a simple and smart way to create, package and manage
+                                            your laravel views (themes) built with the
+                                            <a href="https://github.com/shawnsandy/jarvis-toolkit" class="is-capitalized">Jarvis toolkit,</a> thats me :) yay.
                                         </p>
 
 
@@ -156,21 +180,22 @@
                                             <div class="columns">
 
                                                 <div class="column has-text-right-desktop">
+                                                    <a href="/" class="button is-large">
+                                                    <span class="icon">
+                                                    <i class="ion-help-buoy"></i>
+                                                    </span>
+                                                    <span>View The Readme</span>
+                                            </a>
+                                                </div>
+
+                                                <div class="column has-text-centered">
                                                     <a href="/" class="button is-large is-info">
                                                     <span class="icon">
-                                                    <i class="icon ion-log-in"></i>
+                                                    <i class="ion-log-in"></i>
                                                     </span>
                                                     <span>
                                                     Lets Get Started
                                                     </span>
-                                            </a>
-                                                </div>
-                                                <div class="column has-text-centered">
-                                                    <a href="/" class="button is-large">
-                                                    <span class="icon">
-                                                    <i class="icon ion-help-buoy"></i>
-                                                    </span>
-                                                    <span>Get Support</span>
                                             </a>
                                                 </div>
                                                 <div class="column has-text-left-desktop">
