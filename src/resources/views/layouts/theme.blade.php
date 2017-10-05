@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.2.0/css/iconmonstr-iconic-font.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/jarvis/css/app-e787fe0d66.css">
-
-    <link rel="stylesheet" href="/jarvis/css/theme-4374b24fa0.css">
+    @include('jarvis::partials.header')
     @push('styles')
 
     @endpush
@@ -92,7 +90,7 @@
     </footer>
 
 
-    <script src="/jarvis/js/app-ffa8a6e839961c181f2c.js"></script>
+    @include("jarvis::partials.footer")
     @push('scripts')
 
     @endpush

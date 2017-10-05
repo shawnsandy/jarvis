@@ -1,4 +1,4 @@
-# jarvis
+# Jarvis (alpha)
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
@@ -17,7 +17,7 @@ PSRs you support to avoid any confusion with users and contributors.
 If any of the following are applicable to your project, then the directory structure should follow industry best practises by being named the following.
 
 ```
-bin/        
+bin/
 config/
 src/
 tests/
