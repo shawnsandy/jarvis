@@ -17,7 +17,6 @@
 
                 <div class="content is-medium">
 
-
                     <p class="">
                         Hi I'm <span class="is-uppercase headliners">{{ config("jarvis.name") }} V{{ config("jarvis.version") }}</span>                        , a simple and smart way to create, package and manage your laravel views (themes) built with the
                         <a href="https://github.com/shawnsandy/jarvis-toolkit" class="is-capitalized oswald">Jarvis toolkit,</a>                        thats me :) yay. Now that we are buddies lets get started.

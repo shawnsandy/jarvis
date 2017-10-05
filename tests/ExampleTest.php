@@ -3,7 +3,7 @@
 
 namespace ShawnSandy\Jarvis;
 
-use Orchestra\Testbench\TestCase;
+
 
 class ExampleTest extends TestCase
 {

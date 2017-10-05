@@ -2,7 +2,13 @@
 
 namespace ShawnSandy\Jarvis;
 
-class TestCase extends Orchestra\Testbench\BrowserKit\TestCase
+use  ShawnSandy\Jarvis\JarvisThemesProvider ;
+
+use ShawnSandy\Jarvis\JarvisFacade;
+
+use  Orchestra\Testbench\TestCase as OrchestraTestCase;
+
+class TestCase extends OrchestraTestCase
 {
 	protected function getEnvironmentSetUp($app)
 	{
@@ -19,9 +25,26 @@ class TestCase extends Orchestra\Testbench\BrowserKit\TestCase
 	}
 
 
+    /**
+     * Load package service provider
+     * @param  \Illuminate\Foundation\Application $app
+     * @return lasselehtinen\MyPackage\MyPackageServiceProvider
+     */
 	protected function getPackageProviders($app)
 	{
-		return ['ShawnSandy\Jarvis\JarvisServicesProvider'];
-	}
+		return ['ShawnSandy\Jarvis\JarvisThemesProvider'];
+    }
 
+    /**
+     * Load package alias
+     * @param  \Illuminate\Foundation\Application $app
+     * @return array
+     */
+    protected function getPackageAliases($app)
+    {
+        return [
+            'Jarvis' => JarvisFacade::class,
+        ];
+    }
 }
+
