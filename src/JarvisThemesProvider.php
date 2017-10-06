@@ -31,7 +31,7 @@ class JarvisThemesProvider extends ServiceProvider
 		$this->publishes(
 		            [
 		                __DIR__ . '/resources/views' => resource_path('views/vendor/jarvis'),
-		            ], 'jarvis'
+		            ], 'jarvis-views'
 		        );
 
 
@@ -107,6 +107,9 @@ class JarvisThemesProvider extends ServiceProvider
 		                                                            include_once __DIR__ . '/Helpers/helper.php';
 		endif;
 	}
+
+
+
 
 
 
