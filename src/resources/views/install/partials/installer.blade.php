@@ -1,48 +1,85 @@
+ <div class="columns">
+            <div class="column">
+                <div class="column">
+
+                    <div class="content is-small">
+
+                        @include("jarvis::install.partials.headline")
 
 
-<div class="content is-size-7 is-uppercase installs">
+<div class="section has-text-centered">
 
-    <div class="columns is-multiline">
+<p><a href="/" class="button osw is-large is-info">Publish Theme</a></p>
 
-        @foreach(config("jarvis.themes") as $key => $item)
+<p>Publish theme views, assets, configuration to default directories</p>
+</div>
 
 
-        <div class="column is-4">
-            <p class="name">
-                <span class="icon"><i class="ion-android-arrow-dropright"></i></span> {{ $item["name"] }}
-            </p>
+
+
+                        <div class="is-fluid">
+                        <div class="columns">
+                        <div class="column">Name</div>
+                        <div class="column">Description</div>
+                        <div class="column">Author</div>
+                        <div class="column">View Path</div>
+                        <div class="column">Action</div>
+                        </div>
+
+                        </div>
+   <hr>
+                        @foreach(config("jarvis.themes") as $key => $item)
+
+
+                        <div class="columns is-desktop is-uppercase">
+
+                            <div class="column">{{ $item["name"] }}</div>
+                            <div class="column">{{ $item["description"] }}</div>
+                            <div class="column">{{ $item["author"] }}</div>
+                            <div class="column">
+                            jarvisThemes::{{ $key }}
+                            </div>
+                            <div class="column">
+                                <a href="/" class="button osw install is-small">Install</a>
+
+                            </div>
+
+                        </div>
+
+
+                        @endforeach
+
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div class="column is-4">
-            <p class="key">{{ $key }}</p>
-        </div>
-        <div class="column is-4 has-text-right">
-            <p class="action"><a href="" class="button is-small is-success">Install</a></p>
-        </div>
+       <hr>
+
+        <div class="section">
 
 
-        @endforeach
 
+<h2 class="headliners subtitle has-text-centered is-3">
+Copy & Create Theme
+</h2>
 
-    </div>
- <hr>
+            <form action="/" class="has-text-centered create-view">
 
-
-    <form action="/" class="has-text-centered create-view">
-
-        <div class="field has-addons has-addons-centered">
-            <p class="control has-icons-left">
-                <input class="input" type="text" placeholder="view::path">
-                <span class="icon is-small">
+                <div class="field has-addons has-addons-centered is-large">
+                    <p class="control has-icons-left">
+                        <input class="input" type="text" placeholder="jarvisThemes::views_dir">
+                        <span class="icon is-small">
                 <i class="ion-ios-compose-outline"></i>
                 </span>
-            </p>
-            <p class="control">
-                <a class="button is-info">
+                    </p>
+                    <p class="control">
+                        <a class="button is-info">
       Create
     </a>
-            </p>
+                    </p>
+                </div>
+
+            </form>
+
         </div>
-
-    </form>
-
-</div>
