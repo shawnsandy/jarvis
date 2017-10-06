@@ -32,6 +32,7 @@
         .headliners {
 
             font-family: 'oswald', sans-serif;
+            text-transform: uppercase;
         }
 
         .open-sans {
@@ -39,7 +40,7 @@
             font-family: 'Open Sans', sans-serif;
         }
 
-        a.button {
+        a.button.osw {
             text-transform: uppercase;
             font-weight: normal;
             font-family: 'oswald', sans-serif;
@@ -50,7 +51,7 @@
         .content a {
             color: #292929;
             text-decoration: none;
-            border-bottom: 1px dotted #292929;
+            // border-bottom: 1px dotted #292929;
             font-weight: 600;
         }
 
@@ -105,6 +106,15 @@
             justify-content: left;
         }
 
+        .installs .columns {
+
+
+        }
+
+        .box .installs {
+            padding 20px;
+        }
+
     </style>
 </head>
 
@@ -135,6 +145,7 @@
                         </div>
                     </div>
 
+
                     <div class="hero-body">
 
 
@@ -159,7 +170,9 @@
             </div>
 
             <div class="main column is-paddingless wrappers">
+
                 <div class="hero is-fullheight">
+
                     <div class="hero-body">
 
                     @yield('content')
