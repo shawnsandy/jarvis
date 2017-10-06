@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Factory;
 
 /**
 * Service Provider
- * @package ShawnSandy\Jarvis
- */
+* @package ShawnSandy\Jarvis
+*/
 class JarvisThemesProvider extends ServiceProvider
 {
 
@@ -31,7 +31,7 @@ class JarvisThemesProvider extends ServiceProvider
 		$this->publishes(
 		            [
 		                __DIR__ . '/resources/views' => resource_path('views/vendor/jarvis'),
-		            ], 'jarvis-views'
+		            ], 'jarvis'
 		        );
 
 
