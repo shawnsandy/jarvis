@@ -115,6 +115,10 @@
             padding 20px;
         }
 
+        .hide {
+            display: none;
+        }
+
     </style>
 </head>
 
@@ -187,23 +191,24 @@
         <script>
             AOS.init();
 
-            var animationEnded =
+            const animationEnded =
                     "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+
+                    const startButton = u(".start-button")
 
             u(".button").on("mouseover", function (e) {
 
                 let elm = e.currentTarget;
-                u(elm).addClass("animated flash").on(animationEnded, function (e) {
-                    u(elm).removeClass("animated flash")
+                u(elm).addClass("animated bounce").on(animationEnded, function (e) {
+                    u(elm).removeClass("animated bounce")
                 })
             })
 
-            u(".start-button").on('click', function(e){
+            u(startButton).on('click', function(e){
 
                 e.preventDefault();
 
-                u(".get-started").toggleClass("is-active animated fadeIn")
-
+                u(".get-started").toggleClass("is-active animated fadeIn");
 
             })
 
@@ -215,6 +220,16 @@
 
 
             })
+
+
+            u(startButton).on("click", function() {
+
+                u(".page").toggleClass("hide");
+
+            });
+
+
+
 
 
 
