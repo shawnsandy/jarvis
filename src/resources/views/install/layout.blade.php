@@ -199,8 +199,8 @@
             u(".button").on("mouseover", function (e) {
 
                 let elm = e.currentTarget;
-                u(elm).addClass("animated bounce").on(animationEnded, function (e) {
-                    u(elm).removeClass("animated bounce")
+                u(elm).addClass("animated fadeIn").on(animationEnded, function (e) {
+                    u(elm).removeClass("animated fadeIn")
                 })
             })
 
