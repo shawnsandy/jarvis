@@ -146,11 +146,6 @@
                     </div>
 
 
-                    <div class="hero-body">
-
-
-
-                    </div>
 
                     <div class="hero-foot">
                         <div class="section">
@@ -171,6 +166,8 @@
 
             <div class="main column is-paddingless wrappers">
 
+            <div class="container-fluid">
+
                 <div class="hero is-fullheight">
 
                     <div class="hero-body">
@@ -179,6 +176,8 @@
 
                     </div>
                 </div>
+            </div>
+
 
             </div>
 
