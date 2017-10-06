@@ -119,6 +119,10 @@
             display: none;
         }
 
+        main.section {
+            width: 100%
+        }
+
     </style>
 </head>
 
