@@ -3,7 +3,7 @@
 
 namespace ShawnSandy\Jarvis;
 
-
+use ShawnSandy\Jarvis\JarvisFacade as Jarvis;
 
 class ExampleTest extends TestCase
 {
@@ -37,6 +37,10 @@ class ExampleTest extends TestCase
      * @test
      */
      public function truncate() {
+
+        // Jarvis::routes();
+
+        // config('jarvis.test');
 
         $a = "This is a test";
 
