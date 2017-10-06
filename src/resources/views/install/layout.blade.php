@@ -188,14 +188,36 @@
         <script>
             AOS.init();
 
-            u(".button").on("mouseover", function (e) {
-                var animationEnded =
+            var animationEnded =
                     "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+
+            u(".button").on("mouseover", function (e) {
+
                 let elm = e.currentTarget;
-                u(elm).addClass("animated pulse").on(animationEnded, function (animationEnded) {
-                    u(elm).removeClass("animated pulse")
+                u(elm).addClass("animated flash").on(animationEnded, function (e) {
+                    u(elm).removeClass("animated flash")
                 })
             })
+
+            u(".start-button").on('click', function(e){
+
+                e.preventDefault();
+
+                u(".get-started").toggleClass("is-active animated fadeIn")
+
+
+            })
+
+            u(".modal-close").on('click', function(e){
+
+                e.preventDefault();
+
+                u(".modal").toggleClass("is-active animated fadeIn")
+
+
+            })
+
+
 
         </script>
 </body>
