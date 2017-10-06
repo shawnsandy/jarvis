@@ -174,7 +174,6 @@
 
             <div class="main column is-paddingless wrappers">
 
-            <div class="container-fluid">
 
                 <div class="hero is-fullheight">
 
@@ -183,7 +182,7 @@
                     @yield('content')
 
                     </div>
-                </div>
+
             </div>
 
 
@@ -228,16 +227,12 @@
 
             u(startButton).on("click", function() {
 
-                u(".page").toggleClass("hide");
+                u(".page").toggleClass("hide").toggleClass("animated bounceIn");
 
             });
 
-
-
-
-
-
         </script>
+        </div>
 </body>
 
 </html>
