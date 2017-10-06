@@ -79,20 +79,21 @@ class JarvisThemesProvider extends ServiceProvider
 
 		$this->registerFactoriesPath(__DIR__.'/factories');
 
-		$views = resource_path(
-		        "views/themes/jarvis"
+		$view_path = base_path(
+		        "themes/jarvis"
 		        );
 
-		$this->loadViewsFrom($views, 'jarvis');
-	}
+        $this->loadViewsFrom($view_path, 'jarvisThemes');
+
+    }
 
 
-	/**
-	* Register factories.
-	                        *
-	                        * @param  string  $path
-	                        * @return void
-	                        */
+        /**
+        * Register factories.
+        *
+        * @param  string  $path
+        * @return void
+        */
 	    protected function registerFactoriesPath($path)
 	    {
 		$this->app->make(Factory::class)->load($path);
@@ -109,11 +110,11 @@ class JarvisThemesProvider extends ServiceProvider
 
 
 
-	/**
-	* Register any package services.
-	                             *
-	                             * @return void
-	                             */
+/**
+* Register any package services.
+*
+* @return void
+*/
 	    public function register()
 	    {
 
