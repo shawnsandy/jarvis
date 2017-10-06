@@ -42,7 +42,7 @@
                     <div class="columns">
 
                         <div class="column has-text-right-desktop">
-                            <a href="/" class="button is-large">
+                            <a href="/" class="button osw is-large">
                                                     <span class="icon">
                                                     <i class="ion-document-text"></i>
                                                     </span>
@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="column has-text-centered">
-                            <a href="/" class="button is-large is-info">
+                            <a href="/" class="button osw is-large is-info start-button osw">
                                                     <span class="icon">
                                                     <i class="ion-log-in"></i>
                                                     </span>
@@ -61,7 +61,7 @@
                                             </a>
                         </div>
                         <div class="column has-text-left-desktop">
-                            <a href="/" class="button is-large">
+                            <a href="/" class="button is-large osw">
                                                     <span class="icon">
                                                     <i class="icon ion-social-github"></i>
                                                     </span>
@@ -80,6 +80,9 @@
 
     </section>
 
+    <div>
+    @include('jarvis::install.start')
+    </div>
 
 </div>
 
