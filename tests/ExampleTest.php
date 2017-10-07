@@ -1,8 +1,8 @@
 <?php
 
 
-namespace ShawnSandy\Jarvis;
-
+namespace ShawnSandy\Jarvis\Test;
+use App\User;
 use ShawnSandy\Jarvis\JarvisFacade as Jarvis;
 
 class ExampleTest extends TestCase
@@ -49,6 +49,23 @@ class ExampleTest extends TestCase
         $c = $this->truncateWords($b, 14);
 
          $this->assertEquals($a, $c);
+     }
+
+
+
+     /**
+      * @test
+      */
+     public function add_user() {
+
+        // User::create([
+        //     "name" => "Shawn Sandy",
+        //     "email" => "me@shawnsandy.com",
+        //     "password" => "passowrd",
+        // ]);
+
+        $this->assertTrue(true);
+
      }
 
 }
