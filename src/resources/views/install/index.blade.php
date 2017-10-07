@@ -1,8 +1,8 @@
 @extends('jarvis::install.layout') @section('content')
 
-<main class="section">
+<main class="container is-fluid">
 
-    <div class="container-fluid page">
+    <div class="page">
 
         @include("jarvis::install.partials.introduction")
 

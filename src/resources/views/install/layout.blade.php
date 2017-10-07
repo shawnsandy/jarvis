@@ -123,6 +123,20 @@
             width: 100%
         }
 
+        .bar {
+
+            border-bottom: 1px solid lightgray;
+            margin-bottom: 10px;
+            padding: 5px;
+
+        }
+
+        .page {
+            -vendor-animation-duration: 15s;
+  -vendor-animation-delay: 11s;
+  -vendor-animation-iteration-count: infinite;
+        }
+
     </style>
 </head>
 
@@ -160,7 +174,7 @@
                             <div class="content is-small has-text-centered">
 
                                 <p class="is-uppercase">
-                                    <span class="author"> Produced by: {{ config("jarvis.theme.default.author") }}</span> |
+                                    <span class="author"> Author : {{ config("jarvis.themes.default.author") }}</span> |
                                     <span class="larevel-credits">Powered by Laravel {{ App::version() }}</span>
                                 </p>
 
@@ -202,32 +216,29 @@
             u(".button").on("mouseover", function (e) {
 
                 let elm = e.currentTarget;
-                u(elm).addClass("animated fadeIn").on(animationEnded, function (e) {
-                    u(elm).removeClass("animated fadeIn")
+                u(elm).addClass("animated pulse").on(animationEnded, function (e) {
+                    u(elm).removeClass("animated pulse")
                 })
             })
 
-            u(startButton).on('click', function(e){
+
+            u(startButton).on("click", function(e) {
 
                 e.preventDefault();
 
-                u(".get-started").toggleClass("is-active animated fadeIn");
+                u(".page").toggleClass("hide").toggleClass("animated zoomInUp").on(animationEnded, function(e) {
 
-            })
+                    u(e.currentTarget).removeClass("animated zoomInUp");
 
-            u(".modal-close").on('click', function(e){
+                });
 
-                e.preventDefault();
+            });
 
-                u(".modal").toggleClass("is-active animated fadeIn")
+            u(".exit-button").on("click", function(e) {
 
+                e.preventDefault()
 
-            })
-
-
-            u(startButton).on("click", function() {
-
-                u(".page").toggleClass("hide").toggleClass("animated bounceIn");
+                u(".page").toggleClass("hide");
 
             });
 

@@ -49,6 +49,7 @@ class TestCase extends OrchestraTestCase
 		return [
 				            'Jarvis' => JarvisFacade::class,
 				        ];
-	}
+    }
+
 }
 
