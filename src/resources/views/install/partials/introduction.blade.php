@@ -1,6 +1,6 @@
 <div class="section introduction">
 
-<div class="columns">
+<div class="columns is-fluid is-multiline">
 
     <div class="column is-8 is-offset-2">
 

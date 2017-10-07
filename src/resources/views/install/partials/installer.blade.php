@@ -1,5 +1,9 @@
 <div class="columns">
-    <div class="column">
+    <div class="column is-multiline">
+<div class="column is-12 has-text-centered">
+@include("jarvis::partials.messages")
+</div>
+
         <div class="column is-8 is-offset-2">
 
 
@@ -39,7 +43,6 @@
                     </div>
                     <div class="column">
                         <a href="/" class="button osw install is-small">Install</a>
-
                     </div>
 
                 </div>
@@ -61,29 +64,24 @@
         Copy & Create Theme
     </h2>
 
-    <form action="/" class="has-text-centered create-view">
+    <form action="/installs" class="has-text-centered create-view" method="post">
 
         <div class="field has-addons has-addons-centered is-large">
             <p class="control has-icons-left">
-                <input class="input is-medium" type="text" placeholder="Name of view directory">
+                <input name="view_path" class="input is-medium" type="text" placeholder="Name of view directory" required min="4" max="25">
+                 {{ csrf_field() }}
                 <span class="icon">
                 <i class="ion-android-add-circle"></i>
                 </span>
             </p>
             <p class="control">
-                <a class="button is-info is-medium">
+                <button type="submit" class="button is-info is-medium">
     <span class="is-size-6">Copy Views</span>
-    </a>
+    </button>
             </p>
         </div>
 
     </form>
 
 </div>
-<div class="section content">
-<p class="title is-1 has-text-centered">
-<a  class="is-link exit-button">
-<i class="ion-close-circled back"></i>
-</a>
-</p>
-</div>
+
