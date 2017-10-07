@@ -1,5 +1,5 @@
 @if (count($errors) > 0)
-    <div class="alert alert-danger">
+    <div class="notification is-danger">
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -9,25 +9,28 @@
 @endif
 
 @if(session('success'))
-    <p class="alert alert-success text-center">
-        {{ session('success') }}
-    </p>
+    <div class="notification is-success">
+    <div class="section">{{ session('success') }}</div>
+    </div>
 @endif
 
 @if(session('info'))
-    <p class="alert alert-info text-center">
-        {{ session('info') }}
-    </p>
+    <div class="notification is-primary">
+    <div class="section">{{ session('info') }}</div>
+
+    </div>
 @endif
 
 @if(session('warning'))
-    <p class="alert alert-warning text-center">
-        {{ session('warning') }}
-    </p>
+    <div class="notification is-warning">
+    <div class="section"> {{ session('warning') }}</div>
+
+    </div>
 @endif
 
 @if(session('error'))
-    <p class="alert alert-danger text-center">
-        {{ session('error') }}
-    </p>
+    <div class="notification is-danger">
+    <div class="section">{{ session('error') }}</div>
+
+    </div>
 @endif
