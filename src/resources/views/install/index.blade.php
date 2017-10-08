@@ -1,4 +1,5 @@
-@extends('jarvis::install.layout') @section('content')
+@extends(Jarvis::views("install.layout"))
+@section('content')
 
 <main class="container is-fluid">
 
@@ -7,7 +8,7 @@
 @if (count($errors) < 1)
     <div class="page">
 
-        @include("jarvis::install.partials.introduction")
+        @include(Jarvis::views("install.partials.introduction"))
 
     </div>
 
@@ -18,7 +19,7 @@
 
 @endif
 
-    @include("jarvis::install.partials.installer")
+    @include(Jarvis::views("install.partials.installer"))
 
     </div>
 

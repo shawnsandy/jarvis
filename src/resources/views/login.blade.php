@@ -1,4 +1,4 @@
-@extends('jarvis::layouts.users')
+@extends(Jarvis::views('layouts.users'))
 @section('content')
 <div class="columns">
 

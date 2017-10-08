@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.2.0/css/iconmonstr-iconic-font.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    @include('jarvis::partials.header')
+    @include(Jarvis::views('partials.header'))
     @push('styles')
 
     @endpush
@@ -27,7 +27,7 @@
 <body id="body" class="{{ $theme_class or " page " }} frontend">
     <div class="is-dark">
 
-        @include('jarvis::partials.nav')
+        @include(Jarvis::views('partials.nav'))
 
     </div>
 
@@ -90,7 +90,7 @@
     </footer>
 
 
-    @include("jarvis::partials.footer")
+    @include(Jarvis::views("partials.footer"))
     @push('scripts')
 
     @endpush

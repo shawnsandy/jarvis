@@ -1,7 +1,7 @@
 <div class="columns">
     <div class="column is-multiline">
         <div class="column is-12 has-text-centered">
-            @include("jarvis::partials.messages")
+            @include(Jarvis::views("partials.messages"))
         </div>
 
         <div class="column is-8 is-offset-2">
@@ -11,7 +11,7 @@
 
                 <div class="section">
 
-                    @include("jarvis::install.partials.headline")
+                    @include(Jarvis::views("install.partials.headline"))
 
 <hr>
                     <div class="content has-text-centered">
@@ -25,7 +25,8 @@
 
                             <div class="field has-addons has-addons-centered is-large">
                                 <p class="control has-icons-left">
-                                    <input name="admin_key" class="admin_key input is-large" type="text" placeholder="Theme admin key" required min="4" max="25"> {{ csrf_field() }}
+                                    <input name="admin_key" class="admin_key input is-large" type="text" placeholder="Enter theme admin key" required min="4" max="25">
+                                    {{ csrf_field() }}
                                     <span class="icon">
                                         <i class="ion-lock-combination"></i>
                                     </span>

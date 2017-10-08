@@ -1,7 +1,7 @@
-@extends('jarvis::layouts.theme')
+@extends(Jarvis::views('layouts.theme'))
 @section('content')
 
-@include('jarvis::partials.cover')
+@include(Jarvis::views('partials.cover'))
 
 <section class="actions section is-medium">
 

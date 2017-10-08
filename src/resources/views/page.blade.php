@@ -1,4 +1,4 @@
-@extends('jarvis::layouts.theme')
+@extends(Jarvis::views('layouts.theme'))
 
 @section('content')
     <main class="section is-medium">

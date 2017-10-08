@@ -3,8 +3,8 @@
     <div class="modal-content">
         <div class="box">
             <div class="content">
-                @include('jarvis::install.partials.headline')
-                @include('jarvis::install.partials.installer')
+                @include(Jarvis::views('install.partials.headline'))
+                @include(Jarvis::views('install.partials.installer'))
 
                 <p class="has-text-right">
                     <button class="button osw start-button is-light"><span class="ion-close-round"></span></button>
