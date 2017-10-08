@@ -1,27 +1,50 @@
 <div class="columns">
     <div class="column is-multiline">
-<div class="column is-12 has-text-centered">
-@include("jarvis::partials.messages")
-</div>
+        <div class="column is-12 has-text-centered">
+            @include("jarvis::partials.messages")
+        </div>
 
         <div class="column is-8 is-offset-2">
 
 
             <div class="content is-small">
 
-        <div class="section">
+                <div class="section">
 
-                @include("jarvis::install.partials.headline")
+                    @include("jarvis::install.partials.headline")
+
+<hr>
+                    <div class="content has-text-centered">
 
 
-                <div class="content has-text-centered">
+                        <p>Publish theme views, assets, configuration to default Laravel directories</p>
 
-                    <p><a href="/" class="button osw is-large is-info">Publish Theme</a></p>
 
-                    <p>Publish theme views, assets, configuration to default Laravel directories</p>
+
+                        <form action="/jarvis/setup/publish" class="has-text-centered create-view" method="post">
+
+                            <div class="field has-addons has-addons-centered is-large">
+                                <p class="control has-icons-left">
+                                    <input name="admin_key" class="admin_key input is-large" type="text" placeholder="Theme admin key" required min="4" max="25"> {{ csrf_field() }}
+                                    <span class="icon">
+                                        <i class="ion-android-add-circle"></i>
+                                    </span>
+                                </p>
+                                <p class="control">
+                                    <button type="submit" class="button is-info is-large rounded-right-border">
+                                        <span class="is-size-6">Publish Theme</span>
+                                    </button>
+                                </p>
+                            </div>
+
+                        </form>
+
+
+
+
+                    </div>
+
                 </div>
-
-        </div>
                 <div class="columns bar">
                     <div class="column">Name</div>
                     <div class="column">Description</div>

@@ -15,6 +15,7 @@
     @else
 
     <div class="section installs page">
+
 @endif
 
     @include("jarvis::install.partials.installer")
