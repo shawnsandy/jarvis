@@ -104,7 +104,7 @@
                 </button>
             </p>
         </div>
-        <p class="is-size-7 is-warning">* Theme admin key is required above</p>
+        <p class="is-size-7 is-warning key-required fade">* Theme admin key is required, please enter it above</p>
 
     </form>
 

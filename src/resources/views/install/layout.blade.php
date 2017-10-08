@@ -141,6 +141,14 @@
   -vendor-animation-iteration-count: infinite;
         }
 
+        .fade {
+                transition: all .3s ease;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: initial;
+        }
+
     </style>
 </head>
 
@@ -246,23 +254,16 @@
 
             });
 
-            u("input.admin_key").on("change", function(e) {
+            u(".admin_key").on("change", function(e) {
 
 
-                console.log(e.currentTarget.value);
-
-
-
-                u("input.v_key").attr("value", e.currentTarget.value);
+                u(".v_key").attr("value", e.currentTarget.value);
 
                 var btn = u(".create-theme")
 
-                btn.removeAttribute("disabled");
-
+                u(".key-required").toggleClass("hide fade");
 
             });
-
-
 
         </script>
         </div>
