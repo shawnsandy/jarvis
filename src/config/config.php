@@ -16,19 +16,8 @@ return [
         "description" => "Default theme",
         "options" => [],
         "fields" => []
-        ],
 
-        "galbo" => [
-        "author" => "Shawn Sandy",
-        "email" => "me@acme.com",
-        "website" => "http://",
-        "name" => "Galbo Realtors",
-        "description" => "Sample 1",
-        "prefix" => "jarvis",
-        "options" => [],
-
-        "fields" => []
-        ],
+        ]
 
     ]
 

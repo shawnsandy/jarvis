@@ -85,6 +85,18 @@ class JarvisThemesProvider extends ServiceProvider
 
         $this->loadViewsFrom($view_path, 'jarvisThemes');
 
+        config(["jarvis.themes.galbo" => [
+            "author" => "Shawn Sandy",
+            "email" => "me@galborealtors.com",
+            "website" => "http://",
+            "name" => "Galbo Realtors",
+            "description" => "Sample 1",
+            "prefix" => "jarvis",
+            "options" => [],
+
+            "fields" => []
+        ]]);
+
     }
 
 
