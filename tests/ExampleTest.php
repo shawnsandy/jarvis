@@ -4,12 +4,11 @@
 namespace ShawnSandy\Jarvis\Test;
 use App\User;
 use ShawnSandy\Jarvis\JarvisFacade as Jarvis;
-use Aedart\Testing\Laravel\Traits\TestHelperTrait;
 
 class ExampleTest extends TestCase
 {
 
-    use TestHelperTrait;
+
 
 
 
@@ -62,9 +61,6 @@ class ExampleTest extends TestCase
 
 
 
-
-
-
 	/**
 	* @test
 			      */
@@ -77,44 +73,6 @@ class ExampleTest extends TestCase
 						        // 		]);
 
 		$this->assertTrue(true);
-
-	}
-
-
-
-
-
-	/**
-	* @test
-			     */
-
-	public function readSomethingFromConfig(){
-
-		// 		Calling config, using Laravel defined helper method
-								$defaultDbDriver = config('database.default');
-
-
-		$this->assertSame('mysql', $defaultDbDriver);
-
-	}
-
-
-
-
-	/**
-	* @test
-		     */
-
-	public function readSomethingElseFromConfig(){
-
-		// 		Get the application instance
-						$app = $this->getApplication();
-
-
-		$queueDriver = $app['config']['queue.default'];
-
-
-		$this->assertSame('sync', $queueDriver);
 
 	}
 
