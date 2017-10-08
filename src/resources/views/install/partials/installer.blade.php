@@ -65,23 +65,23 @@
     </h2>
 
     <form action="/installs" class="has-text-centered create-view" method="post">
-
+<input name="theme_admin_key" class="input v_key is-medium" type="hidden" placeholder="">
         <div class="field has-addons has-addons-centered is-large">
             <p class="control has-icons-left">
-                <input name="view_path" class="input is-medium" type="text" placeholder="Name of view directory" required min="4" max="25">
-                 {{ csrf_field() }}
+
+                <input name="view_path" class="input is-medium" type="text" placeholder="Name of view directory" required min="4" max="25"> {{ csrf_field() }}
                 <span class="icon">
-                <i class="ion-android-add-circle"></i>
+                    <i class="ion-android-add-circle"></i>
                 </span>
             </p>
             <p class="control">
-                <button type="submit" class="button is-info is-medium">
-    <span class="is-size-6">Copy Views</span>
-    </button>
+                <button type="submit" class="create-theme button is-info is-medium osw">
+                    <span class="is-size-6">Copy Views</span>
+                </button>
             </p>
         </div>
+        <p class="is-size-7 is-warning">* Theme admin key is required above</p>
 
     </form>
 
 </div>
-

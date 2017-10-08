@@ -12,9 +12,10 @@ class InstallsController extends JarvisController {
 
         $contents = file_get_contents($this->resources."/views/index.blade.php");
 
-        $viewPath= $request->validate([
+        $viewPath = $request->validate([
 
-            "view_path" => "required|string|min:5|max:20"
+            "view_path" => "required|alpha_dash|min:5|max:20",
+            "validation_key" => "required|alpha_dash",
 
         ]);
 
