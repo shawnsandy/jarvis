@@ -122,6 +122,10 @@
         main.section {
             width: 100%
         }
+        .round-right-border {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
 
         .bar {
 
@@ -241,6 +245,24 @@
                 u(".page").toggleClass("hide");
 
             });
+
+            u("input.admin_key").on("change", function(e) {
+
+
+                console.log(e.currentTarget.value);
+
+
+
+                u("input.v_key").attr("value", e.currentTarget.value);
+
+                var btn = u(".create-theme")
+
+                btn.removeAttribute("disabled");
+
+
+            });
+
+
 
         </script>
         </div>
