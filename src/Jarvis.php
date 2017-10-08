@@ -17,4 +17,17 @@
         }
 
 
+
+        /**
+         * Load views
+         *
+         * @param string $blade_path path to your blade file `partials.example`.
+         * @return void
+         */
+        public function views($blade_path) {
+            $view = config("jarvis.view");
+            return $view."::".$blade_path;
+        }
+
+
     }
