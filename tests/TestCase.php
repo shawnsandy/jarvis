@@ -6,10 +6,17 @@ use  ShawnSandy\Jarvis\JarvisThemesProvider ;
 
 use ShawnSandy\Jarvis\JarvisFacade;
 
-use  Orchestra\Testbench\TestCase as OrchestraTestCase;
+use Orchestra\Testbench\BrowserKit\TestCase as OrchestraTestCase;
 
 class TestCase extends OrchestraTestCase
 {
+
+    /**
+     * The base URL to use while testing the application.
+     *
+     * @var string
+     */
+    protected $baseUrl = 'http://laradev.app';
 
 	protected function getEnvironmentSetUp($app)
 			{
