@@ -12,7 +12,7 @@ class BrowserTest extends TestCase
     public function testHttp()
     {
 
-       $this->assertTrue(ture);
+       $this->assertTrue(true);
 
 
     }
