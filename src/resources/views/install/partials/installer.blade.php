@@ -27,7 +27,7 @@
                                 <p class="control has-icons-left">
                                     <input name="admin_key" class="admin_key input is-large" type="text" placeholder="Theme admin key" required min="4" max="25"> {{ csrf_field() }}
                                     <span class="icon">
-                                        <i class="ion-android-add-circle"></i>
+                                        <i class="ion-lock-combination"></i>
                                     </span>
                                 </p>
                                 <p class="control">
@@ -71,7 +71,7 @@
                 </div>
 
                 @endforeach
-
+<hr>
             </div>
 
         </div>
@@ -93,8 +93,8 @@
             <p class="control has-icons-left">
 
                 <input name="view_path" class="input is-medium" type="text" placeholder="Name of view directory" required min="4" max="25"> {{ csrf_field() }}
-                <span class="icon">
-                    <i class="ion-android-add-circle"></i>
+                <span class="icon is-medium">
+                    <i class="ion-paintbucket"></i>
                 </span>
             </p>
             <p class="control">
