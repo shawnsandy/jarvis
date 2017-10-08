@@ -55,6 +55,12 @@ class ThemeConfigurationTest extends TestCase
 
         $this->assertArrayHasKey("acme", $new_config);
 
+        $this->assertArrayHasKey("website", $new_config["acme"]);
+
+        $this->assertEquals("me@acme.com", $new_config["acme"]["email"]);
+
+
+
     }
 
 
