@@ -82,9 +82,9 @@ class JarvisThemesProvider extends ServiceProvider
 
 		$this->registerThemeSettings();
 
-		if (!$this->app->runningInConsole()) :
+
 		    include_once __DIR__ . '/Helpers/helper.php';
-		endif;
+
 
 	}
 

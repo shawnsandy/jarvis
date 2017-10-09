@@ -7,61 +7,106 @@ class ThemeConfigurationTest extends TestCase
 {
 
 
-    /**
-     * Test that true does in fact equal true
-     */
-    public function testTrueIsTrue()
-    {
-        $this->assertTrue(true);
-    }
-
-    /**
-     * @test
-     */
-    public function check_if_themes_config_is_array()
-    {
-
-        $arr = config("jarvis.themes");
-
-        $this->assertTrue(is_array($arr));
 
 
-    }
+	/**
+	* @test
+	     */
+	    public function check_if_themes_config_is_array()
+	    {
 
-    /**
-     * @test
-     */
-    public function can_add_settings_to_themes_array()
-    {
+		$arr = config("jarvis.themes");
 
-        $config = config("jarvis.themes");
-        $add_config = config(["jarvis.themes.acme" => [
-                "author" => "Daffy Duck",
-                "email" => "me@acme.com",
-                "website" => "http://",
-                "name" => "Galbo Realtors",
-                "description" => "Sample 1",
-                "prefix" => "jarvis",
-                "options" => [],
+		$this->assertTrue(is_array($arr));
 
-                "fields" => []
-            ]
 
-        ]);
+	}
 
-        $new_config = config("jarvis.themes");
 
-        $this->assertEquals(count($config) + 1, count($new_config));
+	/**
+	* @test
+	     */
+	    public function can_add_settings_to_themes_array()
+	    {
 
-        $this->assertArrayHasKey("acme", $new_config);
+		$config = config("jarvis.themes");
+		$add_config = config(["jarvis.themes.acme" => [
+		                "author" => "Daffy Duck",
+		                "email" => "me@acme.com",
+		                "website" => "http://",
+		                "name" => "Galbo Realtors",
+		                "description" => "Sample 1",
+		                "prefix" => "jarvis",
+		                "options" => [],
 
-        $this->assertArrayHasKey("website", $new_config["acme"]);
+		"fields" => []
+		            ]
 
-        $this->assertEquals("me@acme.com", $new_config["acme"]["email"]);
+		]);
+
+		$new_config = config("jarvis.themes");
+
+		$this->assertEquals(count($config) + 1, count($new_config));
+
+		$this->assertArrayHasKey("acme", $new_config);
+
+		$this->assertArrayHasKey("website", $new_config["acme"]);
+
+		$this->assertEquals("me@acme.com", $new_config["acme"]["email"]);
 
 
 
-    }
+	}
+
+
+
+	/**
+	* @test
+	*/
+	    public function helper_can_generate_jarvis_urls() {
+
+		$url_1 = jarvis_url("index");
+
+		config(["jarvis.base_url" => "acme"]);
+
+		$url_2 = jarvis_url("index");
+
+		$this->assertEquals(url("jarvis/index"), $url_1);
+
+		$this->assertEquals(url("acme/index"), $url_2);
+
+
+
+
+	}
+
+
+        /**
+        * @test
+        *
+        * @return void
+        */
+	    public function helper_can_generate_jarvis_views() {
+
+
+		/** get the default */
+		$default_view = jarvis_views("index");
+
+
+		/** change the view_path */
+		config(["jarvis.view" => "default"]);
+
+
+		/** get the view with new path */
+		$dynamic_view = jarvis_views("index");
+
+		$this->assertEquals("jarvis::index", $default_view);
+
+		$this->assertEquals("default::index", $dynamic_view);
+
+
+	}
+
 
 
 
