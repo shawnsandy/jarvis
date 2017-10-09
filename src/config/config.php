@@ -8,13 +8,13 @@ return [
     "view" => env("THEME_VIEW", "jarvis"),
     "themes" => [
 
-        "default" => [
+        "sample" => [
         "author" => "Shawn Sandy",
         "email" => "me@acme.com",
         "website" => "http://",
-        "name" => "Jarvis",
-        "view" => "jarvis",
-        "description" => "Default theme",
+        "name" => "Acme",
+        "view" => "acme",
+        "description" => "Sample template",
         "options" => [],
         "fields" => []
 

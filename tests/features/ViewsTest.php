@@ -4,7 +4,7 @@ namespace ShawnSandy\Jarvis\Test;
 
 use ShawnSandy\Jarvis\JarvisFacade as Jarvis;
 
-class JarvisTest Extends TestCase
+class ViewsTest Extends TestCase
 
 {
 
@@ -19,13 +19,14 @@ class JarvisTest Extends TestCase
         /** get the default */
         $default_view = Jarvis::views("index");
 
-        /** change the view_padt */
+        /** change the view_path */
         config(["jarvis.view" => "default"]);
 
-        /** git the view with new path */
+        /** get the view with new path */
         $dynamic_view = Jarvis::views("index");
 
         $this->assertEquals("jarvis::index", $default_view);
+
         $this->assertEquals("default::index", $dynamic_view);
 
     }
