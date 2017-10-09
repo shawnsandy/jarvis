@@ -8,7 +8,7 @@ Route::group(["prefix" => "themes"], function(){
 
 	Route::get("publish", "\ShawnSandy\Jarvis\Controllers\Publish");
 
-	Route::view("start", jarvis_views("install.index"));
+	Route::view("index", jarvis_views("install.index"));
 
 	Route::get("readme", function(){
 
