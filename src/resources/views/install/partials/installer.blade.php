@@ -25,14 +25,14 @@
 
                             <div class="field has-addons has-addons-centered is-large">
                                 <p class="control has-icons-left">
-                                    <input name="admin_key" class="admin_key input is-large" type="text" placeholder="Enter theme admin key" required min="4" max="25">
+                                    <input name="admin_key" class="admin_key input is-medium" type="text" placeholder="Enter theme admin key" required min="4" max="25">
                                     {{ csrf_field() }}
                                     <span class="icon">
                                         <i class="ion-lock-combination"></i>
                                     </span>
                                 </p>
                                 <p class="control">
-                                    <button type="submit" class="button is-info is-large rounded-right-border">
+                                    <button type="submit" class="button is-info is-medium rounded-right-border">
                                         <span class="is-size-6">Publish Theme</span>
                                     </button>
                                 </p>

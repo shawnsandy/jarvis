@@ -1,7 +1,7 @@
 <?php
 
 
-Route::group(["prefix" => "setup"], function(){
+Route::group(["prefix" => "themes"], function(){
 
 
 	Route::post("installs", "\ShawnSandy\Jarvis\Controllers\InstallsController");
@@ -14,8 +14,9 @@ Route::group(["prefix" => "setup"], function(){
 
 		$readme = __DIR__."./../../README.md";
 
-		return Jarvis::md($readme);
+		$page = Jarvis::md($readme);
 
+		return view(Jarvis::views("install.readme"), compact("page"));
 	}
 	);
 
