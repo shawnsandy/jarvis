@@ -121,13 +121,13 @@ class JarvisThemesProvider extends ServiceProvider
 
 		/**
 		* Package views
-						          */
-								        $this->loadViewsFrom(__DIR__ . '/resources/views', 'jarvis');
-		$this->publishes(
-								            [
-								                __DIR__ . '/resources/views' => resource_path('views/vendor/jarvis'),
-								            ], 'jarvis-views'
-								        );
+        */
+            $this->loadViewsFrom(__DIR__ . '/resources/views', 'jarvis');
+$this->publishes(
+                [
+                    __DIR__ . '/resources/views' => resource_path('views/vendor/'.config("jarvis.view", "jarvis")),
+                ], 'jarvis-views'
+            );
 
 
 
