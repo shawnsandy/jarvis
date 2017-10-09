@@ -13,7 +13,7 @@
 
                     @include(Jarvis::views("install.partials.headline"))
 
-<hr>
+
                     <div class="content has-text-centered">
 
 

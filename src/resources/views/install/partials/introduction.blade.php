@@ -36,7 +36,7 @@
             <div class="columns">
 
                 <div class="column has-text-right-desktop">
-                    <a href="/" class="button osw is-large">
+                    <a href="{{ jarvis_url("themes/readme") }}" class="button osw is-large">
                                                     <span class="icon">
                                                     <i class="ion-document-text"></i>
                                                     </span>
@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="column has-text-left-desktop">
-                    <a href="/" class="button is-large osw">
+                    <a href="https://github.com/shawnsandy/jarvis/" class="button is-large osw" target="_blank">
                                                     <span class="icon">
                                                     <i class="icon ion-social-github"></i>
                                                     </span>
