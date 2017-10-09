@@ -6,6 +6,7 @@ return [
     "version" => "0.1(alpha)",
     "theme_admin_key" => env("THEME_ADMIN_KEY", "me@acme.com"),
     "view" => env("THEME_VIEW", "jarvis"),
+    "base_url" => "jarvis",
     "themes" => [
 
         "sample" => [
