@@ -50,7 +50,9 @@ class Jarvis
     }
 
     public function url($route_url) {
-        return url();
+
+        return url(config("jarvis.base_url")."/".$route_url);
+
     }
 
 	public function md($file) {
