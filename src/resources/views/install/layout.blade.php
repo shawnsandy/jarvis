@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Them Name</title>
+    <title>{{  config("jarvis.title") }}</title>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.2.0/dist/aos.min.css">
@@ -40,7 +40,7 @@
             font-family: 'Open Sans', sans-serif;
         }
 
-        a.button.osw {
+        .button.osw {
             text-transform: uppercase;
             font-weight: normal;
             font-family: 'oswald', sans-serif;
@@ -240,7 +240,7 @@
 
                 u(".page").toggleClass("hide").toggleClass("animated zoomInUp").on(animationEnded, function(e) {
 
-                    u(e.currentTarget).removeClass("animated zoomInUp");
+                    u(".page").removeClass("animated zoomInUp");
 
                 });
 
