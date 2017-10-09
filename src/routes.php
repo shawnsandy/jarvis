@@ -18,10 +18,3 @@ Route::view("/product", "jarvis::product");
 Route::view("/collections", "jarvis::collections");
 Route::view("/page", "jarvis::page");
 
-Route::group(["prefix" => "setup"], function(){
-
-    Route::post("installs", "\ShawnSandy\Jarvis\Controllers\InstallsController");
-    Route::get("publish", "\ShawnSandy\Jarvis\Controllers\Publish");
-    Route::view("start", "jarvis::install.index");
-
-});
