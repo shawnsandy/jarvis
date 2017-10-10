@@ -65,15 +65,23 @@ class ThemeConfigurationTest extends TestCase
 	*/
 	    public function helper_can_generate_jarvis_urls() {
 
-		$url_1 = jarvis_url("index");
+        $url_1 = jarvis_url("index");
+
 
 		config(["jarvis.base_url" => "acme"]);
 
 		$url_2 = jarvis_url("index");
 
+
+		config(["jarvis.base_url" => null]);
+
+		$url_3 = jarvis_url("index");
+
 		$this->assertEquals(url("jarvis/index"), $url_1);
 
 		$this->assertEquals(url("acme/index"), $url_2);
+
+		$this->assertEquals(url("index"), $url_3);
 
 
 
@@ -98,11 +106,23 @@ class ThemeConfigurationTest extends TestCase
 
 
 		/** get the view with new path */
-		$dynamic_view = jarvis_views("index");
+        $dynamic_view = jarvis_views("index");
+
+
+		/** change the view_path */
+		config(["jarvis.view" => null]);
+
+
+		/** get the view with new path */
+        $null_view = jarvis_views("index");
+
+
 
 		$this->assertEquals("jarvis::index", $default_view);
 
 		$this->assertEquals("default::index", $dynamic_view);
+
+		$this->assertEquals("index", $null_view);
 
 
 	}
