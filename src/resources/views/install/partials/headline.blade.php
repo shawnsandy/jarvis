@@ -1,4 +1,4 @@
-<div class="headliners is-uppercase subtitle is-2 has-text-centered">
+<div class="headliners is-uppercase subtitle is-1 has-text-centered">
     <span class="icon">
     <i class="ion-grid"></i>
     </span>

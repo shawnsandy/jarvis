@@ -109,3 +109,8 @@
     </form>
 
 </div>
+
+<div class="section has-text-centered">
+<button class="button is-medium start-button osw">Cancel</button>
+
+</div>
