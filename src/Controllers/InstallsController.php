@@ -10,7 +10,7 @@ class InstallsController extends JarvisController {
 
 	public function __invoke(Request $request) {
 
-        $contents = file_get_contents($this->resources."/views/index.blade.php");
+
 
         $viewPath = $request->validate([
 

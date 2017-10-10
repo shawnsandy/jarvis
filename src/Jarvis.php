@@ -48,14 +48,14 @@ class Jarvis
 	* @param string $blade_path path to your blade file `partials.example`.
 	* @return void
 	*/
-		   public function views($blade_path) {
-		$view = config("jarvis.view")."::";
+        public function views($blade_path) {
+            $view = config("jarvis.view")."::";
 
-		if(is_null(config("jarvis.view")))
-		        $view = null;
+            if(is_null(config("jarvis.view")))
+            $view = null;
 
-		return $view.$blade_path;
-	}
+            return $view.$blade_path;
+        }
 
 	public function url($route_url) {
 

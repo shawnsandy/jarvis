@@ -88,8 +88,8 @@
         Copy & Create Theme
     </h2>
 
-    <form action="/installs" class="has-text-centered create-view" method="post">
-<input name="theme_admin_key" class="input v_key is-medium" type="hidden" placeholder="">
+    <form action="{{ jarvis_url("themes/installs") }}" class="has-text-centered create-view" method="post">
+<input name="validation_key" class="input v_key is-medium" type="hidden" placeholder="">
         <div class="field has-addons has-addons-centered is-large">
             <p class="control has-icons-left">
 
