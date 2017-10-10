@@ -1,6 +1,6 @@
 <?php
 
-use ShawnSandy\Jarvis\JarvisFacade as Jarvis;
+//use ShawnSandy\Jarvis\JarvisFacade as Jarvis;
 
 /**
  * Get a theme url jarvis themes
@@ -9,7 +9,7 @@ use ShawnSandy\Jarvis\JarvisFacade as Jarvis;
  * @return string
  */
 function jarvis_url($route) {
-    return Jarvis::url($route);
+    return jarvis()->url($route);
 }
 
 
@@ -20,5 +20,11 @@ function jarvis_url($route) {
  * @return string
  */
 function jarvis_views($view_path) {
-    return Jarvis::views($view_path);
+    return jarvis()->views($view_path);
 }
+
+function jarvis() {
+    return app("Jarvis");
+}
+
+
