@@ -12,9 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     @include(Jarvis::views('partials.header'))
-    @push('styles')
+    @stack('styles')
 
-    @endpush
 
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -91,9 +90,8 @@
 
 
     @include(Jarvis::views("partials.footer"))
-    @push('scripts')
+    @stack('scripts')
 
-    @endpush
 
 
 </body>
