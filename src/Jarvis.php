@@ -2,13 +2,6 @@
 
 
 
-/**
-reated by PhpStorm.
-     * User: Shawn
-     * Date: 2/22/2017
-     * Time: 10:03 PM
-     */
-
 namespace ShawnSandy\Jarvis;
 use Michelf\Markdown as MD;
 
@@ -20,12 +13,13 @@ class Jarvis
 
 
 
+
 	/**
 	* App routes
-			         *
-			         * @return void
-			         */
-			        public function routes(){
+				         *
+				         * @return void
+				         */
+				        public function routes(){
 		require  __DIR__.'/routes.php';
 	}
 
@@ -33,30 +27,37 @@ class Jarvis
 
 
 
+
 	/**
 	* Install routes
-			         *
-			         * @return void
-			         */
-			        public function install_routes(){
+				         *
+				         * @return void
+				         */
+				        public function install_routes(){
 		require  __DIR__.'/routes/theme-install.php';
 	}
 
 
+	public function generator_routes() {
+
+        require __DIR__."/routes/generator.php";
+
+
+	}
 
 
 
 	/**
 	* Load views
-		*
-		* @param string $blade_path path to your blade file `partials.example`.
-		* @return void
-		*/
-	        public function views($blade_path) {
+			*
+			* @param string $blade_path path to your blade file `partials.example`.
+			* @return void
+			*/
+		        public function views($blade_path) {
 		$view = config("jarvis.view")."::";
 
 		if(is_null(config("jarvis.view")))
-		            $view = null;
+				            $view = null;
 
 		return $view.$blade_path;
 	}
@@ -66,6 +67,8 @@ class Jarvis
 		return url(config("jarvis.base_url")."/".$route_url);
 
 	}
+
+
 
 	public function md($file) {
 
@@ -79,10 +82,12 @@ class Jarvis
 
 	}
 
+
+
 	public function env_to_array($file = null)
-	    {
-            if(is_null($file))
-            $file = __DIR__."./../.env.example";
+		    {
+		if(is_null($file))
+		            $file = __DIR__."./../.env.example";
 
 		$string = file_get_contents($file);
 		$string = preg_split('/\n+/', $string);
