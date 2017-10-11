@@ -4,11 +4,11 @@
 Route::group(["prefix" => "themes"], function(){
 
 
+	Route::view("index", jarvis_views("install.index"));
+
 	Route::post("installs", "\ShawnSandy\Jarvis\Controllers\InstallsController");
 
 	Route::get("publish", "\ShawnSandy\Jarvis\Controllers\Publish");
-
-	Route::view("index", jarvis_views("install.index"));
 
 	Route::get("readme", function(){
 
@@ -19,5 +19,8 @@ Route::group(["prefix" => "themes"], function(){
 		return view(Jarvis::views("install.readme"), compact("page"));
 	}
 	);
+
+
+
 }
 );
