@@ -5,24 +5,28 @@ use ShawnSandy\Jarvis\JarvisController;
 use Illuminate\Support\Facades\Artisan as Artisan;
 use Illuminate\Http\Request;
 
-class InstallsController extends JarvisController {
+class InstallsController extends JarvisController
+{
 
 
-	public function __invoke(Request $request) {
+    public function __invoke(Request $request) 
+    {
 
 
 
-        $viewPath = $request->validate([
+        $viewPath = $request->validate(
+            [
 
             "view_path" => "required|alpha_dash|min:5|max:20",
             "validation_key" => "required|alpha_dash",
 
-        ]);
+            ]
+        );
 
-		return  $viewPath;
+        return  $viewPath;
 
 
-	}
+    }
 
 
 

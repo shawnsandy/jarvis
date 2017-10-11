@@ -5,10 +5,11 @@
 /**
  * Get a theme url jarvis themes
  *
- * @param string $route
+ * @param  string $route
  * @return string
  */
-function jarvis_url($route) {
+function jarvis_url($route) 
+{
     return jarvis()->url($route);
 }
 
@@ -16,14 +17,16 @@ function jarvis_url($route) {
 /**
  * Get the view path for a jarvis theme
  *
- * @param string $view_path
+ * @param  string $view_path
  * @return string
  */
-function jarvis_views($view_path) {
+function jarvis_views($view_path) 
+{
     return jarvis()->views($view_path);
 }
 
-function jarvis() {
+function jarvis() 
+{
     return app("Jarvis");
 }
 

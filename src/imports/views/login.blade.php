@@ -1,13 +1,12 @@
-
 <!doctype html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <title>
-  
-  
-  
+
+
+
   </title>
 
    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
@@ -25,15 +24,15 @@
   <!-- Generate using http://realfavicongenerator.net/ -->
 
 
-  
-<link rel="stylesheet" href="/jarvis/css/users-e2a635b6f4.css"> 
+
+<link rel="stylesheet" href="/jarvis/css/users-e2a635b6f4.css">
 </head>
 
 <body class="login-page">
 
 <!-- content -->
 
- 
+
 <!-- content -->
 
 <main>
@@ -49,7 +48,7 @@
 		</div>
 
 		<div class="navbar-end">
-			
+
 		</div>
 
 	</div>
@@ -132,10 +131,10 @@
 
 <!-- endcontent -->
 
-  
+
    <script src="/jarvis/js/app-40a6ab64e2c8ef467e4c.js"></script>
 
-  
+
 
 </body>
 

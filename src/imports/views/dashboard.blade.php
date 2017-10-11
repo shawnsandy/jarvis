@@ -1,11 +1,10 @@
-
 <!doctype html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <title>
-      
+
   </title>
      <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   <link href="/jarvis/css/blokkfont-b2e761c39d.css" rel="stylesheet" type="text/css">
@@ -25,7 +24,7 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Generate using http://realfavicongenerator.net/ -->
 
- <link rel="stylesheet" href="/jarvis/css/admin-070a62256f.css"> 
+ <link rel="stylesheet" href="/jarvis/css/admin-070a62256f.css">
 </head>
 
 <body class="admin">
@@ -119,7 +118,7 @@
             </div>
             <!-- content -->
 
-            
+
 
 <!-- content -->
 
@@ -254,12 +253,12 @@
 
   </section>
 
-   
+
   <script src="/jarvis/js/app-40a6ab64e2c8ef467e4c.js"></script>
   <script src="/jarvis/js/admin-40a6ab64e2c8ef467e4c.js"></script>
 
 
-   
+
 
 </body>
 
