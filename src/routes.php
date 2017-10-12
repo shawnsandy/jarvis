@@ -10,13 +10,5 @@ Created by PhpStorm.
 
 
 //
-Route::view("/index", "jarvis::index", ["theme_class" => "front-page"]);
-Route::view("/dashboard", "jarvis::dashboard");
-Route::view("/login", "jarvis::login");
-Route::view("/about", "jarvis::about");
-Route::view("/register", "jarvis::register");
-Route::view("/product", "jarvis::product");
-Route::view("/collections", "jarvis::collections");
-Route::view("/page", "jarvis::page");
 
-Route::any("/views/{view?}/{page?}", "\ShawnSandy\Jarvis\Controllers\PagesController");
+Route::any("/view/{view?}/{page?}","\ShawnSandy\Jarvis\Controllers\PagesController");
