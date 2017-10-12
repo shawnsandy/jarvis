@@ -18,3 +18,12 @@ Route::view("/product", "jarvis::product");
 Route::view("/collections", "jarvis::collections");
 Route::view("/page", "jarvis::page");
 Route::view("/landing/aside", "jarvis::dark-side");
+
+Route::any("/views/{view?}", function($view = null) {
+
+    if(is_null($view))
+    $view = "index";
+
+    return view(jarvis_views($view));
+
+});
