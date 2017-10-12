@@ -1,3 +1,6 @@
+@php
+$theme_class = "front-page";
+@endphp
 @extends(jarvis_views('layouts.theme'))
 @section('content')
 
