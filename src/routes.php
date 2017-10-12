@@ -1,7 +1,8 @@
 <?php
 
+
 /**
-* Created by PhpStorm.
+Created by PhpStorm.
  * User: shawnsandy
  * Date: 10/27/16
  * Time: 12:58 PM
@@ -17,13 +18,5 @@ Route::view("/register", "jarvis::register");
 Route::view("/product", "jarvis::product");
 Route::view("/collections", "jarvis::collections");
 Route::view("/page", "jarvis::page");
-Route::view("/landing/aside", "jarvis::dark-side");
 
-Route::any("/views/{view?}", function($view = null) {
-
-    if(is_null($view))
-    $view = "index";
-
-    return view(jarvis_views($view));
-
-});
+Route::any("/views/{view?}/{page?}", "\ShawnSandy\Jarvis\Controllers\PagesController");
