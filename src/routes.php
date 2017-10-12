@@ -17,4 +17,4 @@ Route::view("/register", "jarvis::register");
 Route::view("/product", "jarvis::product");
 Route::view("/collections", "jarvis::collections");
 Route::view("/page", "jarvis::page");
-
+Route::view("/landing/aside", "jarvis::dark-side");
