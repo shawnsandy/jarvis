@@ -10,7 +10,8 @@ use ShawnSandy\Jarvis\JarvisController;
 class PagesController extends JarvisController
 {
 	/**
-     * Single action controller
+     * Single action pages controller
+     * Dynamically loads views based on route parameters
      *
      * @param string $views
      * @param string $pages
@@ -19,11 +20,9 @@ class PagesController extends JarvisController
 	public function __invoke($view = null, $page = null)
     {
 
-		if(is_null($view))
-				    $view = "index";
+        $view = !is_null($view) ?: "index";
 
-		if(!is_null($page))
-				    $view = $view."/".$page;
+        $view = is_null($page) ? $view : $view."/".$page ;
 
 		return view(jarvis_views($view));
 
