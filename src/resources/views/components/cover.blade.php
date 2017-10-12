@@ -22,7 +22,7 @@
 @push('styles')
 <style>
 .cover-fold {
-    background-image: url("https://source.unsplash.com/collection/1276695/1800x1200" );
+    background-image: url("https://source.unsplash.com/KuvEVL7lXYQ/1800x1200" );
     background-size: cover;
     backgrounf-position: center center;
 }
