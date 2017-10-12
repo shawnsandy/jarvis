@@ -1,10 +1,7 @@
 @php
 $theme_class = "front-page";
 @endphp
-@extends(jarvis_views('layouts.theme'))
-@section('content')
-
-@include(jarvis_views('components.cover'))
+@extends(jarvis_views('layouts.theme')) @section('content') @include(jarvis_views('components.cover'))
 
 <section class="actions section is-medium">
 
@@ -29,25 +26,25 @@ $theme_class = "front-page";
 
         <div class="container">
 
-	<div class="columns is-multiline">
+            <div class="columns is-multiline">
 
-		<div class="column is-4">
-@include(jarvis_views("components.card"))
-		</div>
+                <div class="column is-4">
+                    @include(jarvis_views("components.card"))
+                </div>
 
-		<div class="column is-4">
+                <div class="column is-4">
 
-@include(jarvis_views("components.card"))
-		</div>
+                    @include(jarvis_views("components.card"))
+                </div>
 
-		<div class="column is-4">
+                <div class="column is-4">
 
-@include(jarvis_views("components.card"))
-		</div>
+                    @include(jarvis_views("components.card"))
+                </div>
 
-	</div>
+            </div>
 
-</div>
+        </div>
 
 
     </div>
@@ -138,16 +135,16 @@ $theme_class = "front-page";
             </div>
 
 
-                <div class="column">
-                    <div class="cards">
-	<div class="card-content">
-		<p class="class">
-			Quia ex et reprehenderit cum sit maxime.
-		</p>
-	</div>
-</div>
-
+            <div class="column">
+                <div class="cards">
+                    <div class="card-content">
+                        <p class="class">
+                            Quia ex et reprehenderit cum sit maxime.
+                        </p>
+                    </div>
                 </div>
+
+            </div>
 
 
 

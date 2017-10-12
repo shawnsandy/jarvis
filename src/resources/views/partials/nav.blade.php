@@ -9,7 +9,7 @@
             <a href="{{ jarvis_url("view/about") }}" class="navbar-item">About</a>
         </div>
         <div class="navbar-divider"></div>
-        <a href="{{ jarvis_url("view/>dashboard") }}" class="navbar-item">Admin</a>
+        <a href="{{ jarvis_url("view/dashboard") }}" class="navbar-item">Admin</a>
         <a href="{{ jarvis_url("view/login") }}" class="navbar-item">
 		<i class="im im-user-circle"></i>
 		</a>
