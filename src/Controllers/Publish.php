@@ -21,7 +21,7 @@ class Publish extends JarvisController
 
 		$exit = Artisan::call("vendor:publish", [
             "--tag" => "jarvis-views",
-            "--force" => "jarvis-views",
+            "--force" => true,
             ]);
 		return back()->with("success", "Your vendor files have been published Sir.");
 
