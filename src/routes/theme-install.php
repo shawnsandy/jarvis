@@ -9,7 +9,7 @@ Route::group(
 
         Route::post("installs", "\ShawnSandy\Jarvis\Controllers\InstallsController");
 
-        Route::get("publish", "\ShawnSandy\Jarvis\Controllers\Publish");
+        Route::any("publish", "\ShawnSandy\Jarvis\Controllers\Publish");
 
         Route::get(
             "readme", function () {
@@ -21,8 +21,6 @@ Route::group(
                 return view(Jarvis::views("install.readme"), compact("page"));
             }
         );
-
-
 
     }
 );

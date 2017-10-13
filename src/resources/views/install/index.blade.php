@@ -1,18 +1,19 @@
-@extends(Jarvis::views("install.layout"))
-@section('content')
+@extends(Jarvis::views("install.layout")) @section('content')
 
 <main class="container is-fluid">
 
 
 
-@if (count($errors) < 1)
-    <div class="page">
+    @if (count($errors)
+    < 1) <div class="page">
+    @include(Jarvis::views("partials.messages"))
 
         @include(Jarvis::views("install.partials.introduction"))
 
     </div>
 
     <div class="section installs page hide">
+    @include(Jarvis::views("partials.messages"))
     @else
 
     <div class="section installs page">

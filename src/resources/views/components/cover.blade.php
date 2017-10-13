@@ -24,7 +24,7 @@
 .cover-fold {
     background-image: url("https://source.unsplash.com/KuvEVL7lXYQ/1800x1200" );
     background-size: cover;
-    backgrounf-position: center center;
+    background-position: center center;
 }
 </style>
 @endpush

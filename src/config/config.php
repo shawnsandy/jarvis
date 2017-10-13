@@ -4,7 +4,7 @@ return [
     "name" => "Jarvis",
     "description" => "A simple theme management toolkit",
     "version" => "0.1(alpha)",
-    "theme_admin_key" => env("THEME_ADMIN_KEY", null),
+    "validation_key" => env("VALIDATION_KEY", 00000000),
     "view" => env("THEME_VIEW", "jarvis"),
     "base_url" => "jarvis",
     "title" => "Jarvis | A smart theme management package for Laravel",
@@ -22,6 +22,6 @@ return [
 
 ]
 
-    ]
+]
 
 ];

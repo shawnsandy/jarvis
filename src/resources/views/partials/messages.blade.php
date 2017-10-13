@@ -10,27 +10,27 @@
 
 @if(session('success'))
     <div class="notification is-success">
-    <div class="section">{{ session('success') }}</div>
+    <div class="has-text-centered">{{ session('success') }}</div>
     </div>
 @endif
 
 @if(session('info'))
     <div class="notification is-primary">
-    <div class="section">{{ session('info') }}</div>
+    <div class="has-text-centered">{{ session('info') }}</div>
 
     </div>
 @endif
 
 @if(session('warning'))
     <div class="notification is-warning">
-    <div class="section"> {{ session('warning') }}</div>
+    <div class="has-text-centered"> {{ session('warning') }}</div>
 
     </div>
 @endif
 
 @if(session('error'))
     <div class="notification is-danger">
-    <div class="section">{{ session('error') }}</div>
+    <div class="has-text-centered">{{ session('error') }}</div>
 
     </div>
 @endif

@@ -257,7 +257,7 @@
             u(".admin_key").on("change", function(e) {
 
 
-                u(".v_key").attr("value", e.currentTarget.value);
+                u(".validation_key").attr("value", e.currentTarget.value);
 
                 var btn = u(".create-theme")
 

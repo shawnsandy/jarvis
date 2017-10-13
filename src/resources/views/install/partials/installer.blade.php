@@ -1,8 +1,6 @@
 <div class="columns">
     <div class="column is-multiline">
-        <div class="column is-12 has-text-centered">
-            @include(Jarvis::views("partials.messages"))
-        </div>
+
 
         <div class="column is-8 is-offset-2">
 
@@ -21,11 +19,11 @@
 
 
 
-                        <form action="/jarvis/setup/publish" class="has-text-centered create-view" method="post">
+                        <form action="/jarvis/themes/publish" class="has-text-centered create-view" method="post">
 
                             <div class="field has-addons has-addons-centered is-large">
                                 <p class="control has-icons-left">
-                                    <input name="admin_key" class="admin_key input is-medium" type="text" placeholder="Enter theme admin key" required min="4" max="25">
+                                    <input name="admin_key" class="admin_key input is-medium" type="text" placeholder="Enter theme admin key" required min="4" max="25" autocomplete="off">
                                     {{ csrf_field() }}
                                     <span class="icon">
                                         <i class="ion-lock-combination"></i>
@@ -33,10 +31,15 @@
                                 </p>
                                 <p class="control">
                                     <button type="submit" class="button is-info is-medium rounded-right-border">
-                                        <span class="is-size-6">Publish Theme</span>
+                                        <span class="is-size-6">Publish Files</span>
                                     </button>
                                 </p>
                             </div>
+                            @if(view()->exists("vendor/".config("jarvis.base_url")."/index"))
+                            <div class="is-7 has-text-warning">
+                            <span class="has-text-danger">Warning publishing will overwrite existing vendor files. Copy and Create a new theme if you wish to modify views</span>
+                            </div>
+                            @endif
 
                         </form>
 
@@ -72,7 +75,7 @@
                 </div>
 
                 @endforeach
-<hr>
+
             </div>
 
         </div>
@@ -89,7 +92,7 @@
     </h2>
 
     <form action="{{ jarvis_url("themes/installs") }}" class="has-text-centered create-view" method="post">
-<input name="validation_key" class="input v_key is-medium" type="hidden" placeholder="">
+<input name="validation_key" class="input validation_key is-medium" type="hidden" placeholder="">
         <div class="field has-addons has-addons-centered is-large">
             <p class="control has-icons-left">
 
