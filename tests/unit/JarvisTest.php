@@ -1,6 +1,6 @@
 <?php namespace ShawnSandy\Jarvis\Test;
 
-
+use ShawnSandy\Jarvis\JarvisFacade as Jarvis;
 
 class JarvisTest extends TestCase
 
