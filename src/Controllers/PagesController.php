@@ -17,14 +17,14 @@ class PagesController extends JarvisController
      * @param string $pages
      * @return void
      */
-	public function __invoke($view = null, $page = null)
+	public function __invoke($views = null, $page = null)
     {
 
-        $view = !is_null($view) ?: "index";
+        $view = $views ?: "index";
 
-        $view = is_null($page) ? $view : $view."/".$page ;
+        $page = is_null($page) ? null : "/".$page;
 
-		return view(jarvis_views($view));
+		return view(jarvis_views($view.$page));
 
 	}
 

@@ -11,4 +11,4 @@ Created by PhpStorm.
 
 //
 
-Route::any("/view/{view?}/{page?}","\ShawnSandy\Jarvis\Controllers\PagesController");
+Route::any("/view/{views?}/{page?}","\ShawnSandy\Jarvis\Controllers\PagesController");
