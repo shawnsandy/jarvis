@@ -8,7 +8,7 @@
  * @param  string $route
  * @return string
  */
-function jarvis_url($route) 
+function jarvis_url($route)
 {
     return jarvis()->url($route);
 }
@@ -20,14 +20,12 @@ function jarvis_url($route)
  * @param  string $view_path
  * @return string
  */
-function jarvis_views($view_path) 
+function jarvis_views($view_path, $from_themes = false)
 {
-    return jarvis()->views($view_path);
+    return jarvis()->views($view_path, $from_themes);
 }
 
-function jarvis() 
+function jarvis()
 {
     return app("Jarvis");
 }
-
-

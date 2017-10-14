@@ -4,8 +4,6 @@ use Illuminate\Routing\Controller;
 
 class JarvisController extends Controller
 {
-
-
     public $views;
     public $resources;
     public $read_me;
@@ -15,10 +13,9 @@ class JarvisController extends Controller
     {
 
         $this->views = __DIR__."/resources/views";
-        $this->resources = __DIR__."/resources";
+        $this->resources = __DIR__."/resources/";
         $this->resources = __DIR__."../README.md";
 
     }
-
 
 }

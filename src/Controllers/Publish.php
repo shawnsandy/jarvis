@@ -19,7 +19,7 @@ class Publish extends JarvisController
 
 		if($validate["admin_key"] == config("jarvis.validation_key")):
 
-		$exit = Artisan::call("vendor:publish", [
+		Artisan::call("vendor:publish", [
             "--tag" => "jarvis-views",
             "--force" => true,
             ]);
