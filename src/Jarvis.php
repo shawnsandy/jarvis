@@ -40,23 +40,33 @@ class Jarvis
 	}
 
 
-
-
-	/**
-	* Load views
-	            *
-	            * @param  string $blade_path path to your blade file `partials.example`.
-	            * @return void
-	            */
-	    public function views($blade_path)
+    /**
+     * Load views
+     *
+     * @param  string $blade path to your blade file `partials.example`.
+     * @param bool    $theme the name of the theme
+     * @return string
+     */
+	    public function views($blade, $theme = null)
 	    {
-		$view = config("jarvis.view")."::";
+
+            /**
+             * if theme is null
+             * view = config("jarvis.view")."::" -- jarvis::
+             * else
+             * view = "jarvisThemes::".config(jarvis.view)."." -- jarvisTheme::jarvis.
+             */
+
+        $jarvis = config("jarvis.view");
+
+		$view = $theme ? "jarvisThemes::{$jarvis}" : "{$jarvis}::";
 
 		if(is_null(config("jarvis.view"))) {
 			$view = null;
 		}
 
-		return $view.$blade_path;
+        return $view.$blade;
+
 	}
 
 	public function url($route_url)
