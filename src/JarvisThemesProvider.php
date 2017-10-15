@@ -1,130 +1,192 @@
 <?php
 
-namespace ShawnSandy\Jarvis;
+    namespace ShawnSandy\Jarvis;
 
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Database\Eloquent\Factory;
-
-
-/**
-* Service Provider
- * @package ShawnSandy\Jarvis
- */
-class JarvisThemesProvider extends ServiceProvider
-{
+    use Illuminate\Support\ServiceProvider;
+    use Illuminate\Database\Eloquent\Factory;
 
 
-	/**
-	* Perform post-registration booting of services.
-	                             *
-	                             * @return void
-	                             */
-	    public function boot()
-	    {
+    /**
+     * er
+     *
+     * @package ShawnSandy\Jarvis
+     */
+    class JarvisThemesProvider extends ServiceProvider
+    {
+
+        /**
+         * Register any package services.
+         *
+         * @return void
+         */
+        public function register()
+        {
+
+            $this->mergeConfigFrom(
+                __DIR__ . '/config/config.php', 'jarvis'
+            );
+
+            $this->app->bind(
+                'Jarvis', function () {
+                return new Jarvis();
+            });
+        }
 
 
-
-		/**
-		* Package views
-		                                                         */
-		        $this->loadViewsFrom(__DIR__ . '/resources/views', 'jarvis');
-		$this->publishes(
-		            [
-		                __DIR__ . '/resources/views' => resource_path('views/vendor/jarvis'),
-		            ], 'jarvis-views'
-		        );
+        /**
+         * Perform post-registration booting of services.
+         *
+         * @return void
+         */
+        public function boot()
+        {
 
 
+            $this->loadMigrationsFrom(__DIR__ . '/migrations');
+            $this->app->bind(
+                'Jarvis', function () {
+                return new Jarvis();
+            }
+            );
 
-		/**
-		* Package assets
-		                                                         */
-		        $this->publishes(
-		            [
-		                __DIR__.'/public/' => public_path('jarvis'),
-		            ], 'jarvis-assets'
-		        );
+            $this->registerFactoriesPath(__DIR__ . '/factories');
 
+            $this->publishPackages();
 
-		/**
-		* Package resources to resources
-		                                                         */
-		        $this->publishes(
-		            [
-		                __DIR__.'/resources/assets/' => resource_path('assets/jarvis/'),
-		            ], 'jarvis-resources'
-		        );
+            $this->registerThemeSettings();
 
+            include_once __DIR__ . '/Helpers/helper.php';
 
+            $this->themeDisk();
 
-		/**
-		* Package config
-		                                                         */
-		        $this->publishes(
-		            [__DIR__ . '/config/config.php' => config_path('jarvis.php')],
-		            'jarvis-config'
-		        );
+            $this->themeSetup();
 
-		$this->publishes([
-		                    __DIR__ . '/migrations/' => database_path('migrations')
-		                ], 'jarvis-migrations');
+        }
 
 
-		$this->loadMigrationsFrom(__DIR__ . '/migrations');
-		$this->app->bind(
-		        'Jarvis', function () {
-			return new Jarvis();
-		}
-		);
+        /**
+         * Register factories.
+         *
+         * @param  string $path
+         * @return void
+         */
+        protected function registerFactoriesPath($path)
+        {
+            $this->app->make(Factory::class)->load($path);
+        }
 
-		$this->registerFactoriesPath(__DIR__.'/factories');
-
-		$views = resource_path(
-		        "views/themes/jarvis"
-		        );
-
-		$this->loadViewsFrom($views, 'jarvis');
-	}
+        public function loadProviders()
+        {
 
 
-	/**
-	* Register factories.
-	                        *
-	                        * @param  string  $path
-	                        * @return void
-	                        */
-	    protected function registerFactoriesPath($path)
-	    {
-		$this->app->make(Factory::class)->load($path);
-	}
+        }
 
 
-	public function loadProviders()
-	    {
+        /**
+         * Publish Packages
+         *
+         * @return void
+         */
+        protected function publishPackages()
+        {
 
-		if (!$this->app->runningInConsole()) :
-		                                                            include_once __DIR__ . '/Helpers/helper.php';
-		endif;
-	}
+
+            /**
+             * Package views
+             */
+            $this->loadViewsFrom(__DIR__ . '/resources/views', config("jarvis.view", "jarvis"));
+
+            $this->publishes(
+                [
+                    __DIR__ . '/resources/views' => resource_path('views/vendor/' . config("jarvis.view", "jarvis")),
+                ], 'jarvis-views'
+            );
+
+            /**
+             * Package assets
+             */
+            $this->publishes(
+                [
+                    __DIR__ . '/public/' => public_path('jarvis'),
+                ], 'jarvis-assets'
+            );
 
 
+            /**
+             * Package resources to resources
+             */
+            $this->publishes(
+                [
+                    __DIR__ . '/resources/assets/' => resource_path('assets/jarvis/'),
+                ], 'jarvis-resources'
+            );
 
-	/**
-	* Register any package services.
-	                             *
-	                             * @return void
-	                             */
-	    public function register()
-	    {
 
-		$this->mergeConfigFrom(
-		            __DIR__ . '/config/config.php', 'jarvis'
-		        );
+            /**
+             * Package config
+             */
+            $this->publishes(
+                [__DIR__ . '/config/config.php' => config_path('jarvis.php')],
+                'jarvis-config'
+            );
 
-		$this->app->bind(
-		        'Jarvis', function () {
-			return new Jarvis();
-		}
-		);
-	}
-}
+            $this->publishes(
+                [
+                    __DIR__ . '/migrations/' => database_path('migrations')
+                ], 'jarvis-migrations'
+            );
+
+
+        }
+
+        protected function registerThemeSettings()
+        {
+
+            config(
+                ["jarvis.themes.jarvis" => [
+
+                    "author" => "Shawn Sandy",
+                    "email" => "me@acme.com",
+                    "website" => "http://",
+                    "name" => "Jarvis",
+                    "view" => "jarvis",
+                    "description" => "Default theme",
+                    "options" => [],
+                    "fields" => []
+
+                ]]
+            );
+
+        }
+
+
+        /**
+         * Set the config for
+         */
+        protected function themeDisk() {
+
+        }
+
+        protected function themeSetup()
+        {
+
+            $view_path = base_path("themes/");
+
+            $this->loadViewsFrom($view_path, 'jarvisThemes');
+
+            $this->publishes(
+                [
+                    __DIR__ . '/resources/views' => $view_path,
+                ], 'jarvis-themes'
+            );
+
+            config(["filesystems.disks.themes" => [
+                "driver" => "local",
+                "root" => base_path("themes/".config("jarvis.view")),
+                "url" => config("app.url"),
+                "visibility" => "public"
+            ]]);
+
+        }
+
+    }

@@ -1,4 +1,4 @@
-@extends('jarvis::layouts.dashboard')
+@extends(Jarvis::views('layouts.dashboard'))
 @section('content')
     <div class="widgets">
 	<div class="columns">

@@ -13,14 +13,15 @@
 
     use Illuminate\Support\Facades\Facade;
 
-    class JarvisFacade extends Facade
-    {
+class JarvisFacade extends Facade
+{
 
-        /**
+    /**
          *
          */
-        protected static function  getFacadeAccessor() {
-            return "Jarvis";
-        }
-
+    protected static function getFacadeAccessor() 
+    {
+        return "Jarvis";
     }
+
+}

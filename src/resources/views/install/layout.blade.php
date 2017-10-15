@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Them Name</title>
+    <title>{{  config("jarvis.title") }}</title>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.2.0/dist/aos.min.css">
@@ -32,6 +32,7 @@
         .headliners {
 
             font-family: 'oswald', sans-serif;
+            text-transform: uppercase;
         }
 
         .open-sans {
@@ -39,7 +40,7 @@
             font-family: 'Open Sans', sans-serif;
         }
 
-        a.button {
+        .button.osw {
             text-transform: uppercase;
             font-weight: normal;
             font-family: 'oswald', sans-serif;
@@ -50,7 +51,7 @@
         .content a {
             color: #292929;
             text-decoration: none;
-            border-bottom: 1px dotted #292929;
+            // border-bottom: 1px dotted #292929;
             font-weight: 600;
         }
 
@@ -105,6 +106,49 @@
             justify-content: left;
         }
 
+        .installs .columns {
+
+
+        }
+
+        .box .installs {
+            padding 20px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        main.section {
+            width: 100%
+        }
+        .round-right-border {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .bar {
+
+            border-bottom: 1px solid lightgray;
+            margin-bottom: 10px;
+            padding: 5px;
+
+        }
+
+        .page {
+            -vendor-animation-duration: 15s;
+  -vendor-animation-delay: 11s;
+  -vendor-animation-iteration-count: infinite;
+        }
+
+        .fade {
+                transition: all .3s ease;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: initial;
+        }
+
     </style>
 </head>
 
@@ -135,18 +179,14 @@
                         </div>
                     </div>
 
-                    <div class="hero-body">
 
-
-
-                    </div>
 
                     <div class="hero-foot">
                         <div class="section">
                             <div class="content is-small has-text-centered">
 
                                 <p class="is-uppercase">
-                                    <span class="author"> Produced by: {{ config("jarvis.theme.default.author") }}</span> |
+                                    <span class="author"> Author : {{ config("jarvis.themes.default.author") }}</span> |
                                     <span class="larevel-credits">Powered by Laravel {{ App::version() }}</span>
                                 </p>
 
@@ -159,13 +199,18 @@
             </div>
 
             <div class="main column is-paddingless wrappers">
+
+
                 <div class="hero is-fullheight">
+
                     <div class="hero-body">
 
                     @yield('content')
 
                     </div>
+
                 </div>
+
 
             </div>
 
@@ -175,16 +220,53 @@
         <script>
             AOS.init();
 
-            u(".button").on("mouseover", function (e) {
-                var animationEnded =
+            const animationEnded =
                     "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+
+                    const startButton = u(".start-button")
+
+            u(".button").on("mouseover", function (e) {
+
                 let elm = e.currentTarget;
-                u(elm).addClass("animated pulse").on(animationEnded, function (animationEnded) {
+                u(elm).addClass("animated pulse").on(animationEnded, function (e) {
                     u(elm).removeClass("animated pulse")
                 })
             })
 
+
+            u(startButton).on("click", function(e) {
+
+                e.preventDefault();
+
+                u(".page").toggleClass("hide").toggleClass("animated zoomInUp").on(animationEnded, function(e) {
+
+                    u(".page").removeClass("animated zoomInUp");
+
+                });
+
+            });
+
+            u(".exit-button").on("click", function(e) {
+
+                e.preventDefault()
+
+                u(".page").toggleClass("hide");
+
+            });
+
+            u(".admin_key").on("change", function(e) {
+
+
+                u(".validation_key").attr("value", e.currentTarget.value);
+
+                var btn = u(".create-theme")
+
+                u(".key-required").toggleClass("hide fade");
+
+            });
+
         </script>
+        </div>
 </body>
 
 </html>

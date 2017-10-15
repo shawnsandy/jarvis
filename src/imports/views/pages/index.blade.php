@@ -1,4 +1,12 @@
+<style>
+.cover-fold {
+    background-image: url("https://source.unsplash.com/collection/1276695/1800x1200" );
+    background-size: cover;
+    backgrounf-position: center center;
+}
+</style>
 <section class="cover-fold">
+
     <div class="cover">
         <div>
             <div class="has-text-centered">

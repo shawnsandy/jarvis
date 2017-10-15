@@ -19,9 +19,11 @@
  <link rel="stylesheet" href="/jarvis/css/theme-f440cd0a67.css">
 
 
-  <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Generate using http://realfavicongenerator.net/ -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Generate using http://realfavicongenerator.net/ -->
 
- 
+
+  
 </head>
 
 <body id="body" class="collections-page frontend">
@@ -168,7 +170,7 @@
 </footer>
 
  
-  <script src="/jarvis/js/app-ac9b18b06c8b8b35f136.js"></script>
+  <script src="/jarvis/js/app-40a6ab64e2c8ef467e4c.js"></script>
    
 </body>
 

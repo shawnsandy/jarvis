@@ -19,9 +19,11 @@
  <link rel="stylesheet" href="/jarvis/css/theme-f440cd0a67.css">
 
 
-  <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Generate using http://realfavicongenerator.net/ -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Generate using http://realfavicongenerator.net/ -->
 
- 
+
+  
 </head>
 
 <body id="body" class="front-page frontend">
@@ -59,7 +61,15 @@
 
 <!-- content -->
 
+<style>
+.cover-fold {
+    background-image: url("https://source.unsplash.com/collection/1276695/1800x1200" );
+    background-size: cover;
+    backgrounf-position: center center;
+}
+</style>
 <section class="cover-fold">
+
     <div class="cover">
         <div>
             <div class="has-text-centered">
@@ -348,7 +358,7 @@
 </footer>
 
  
-  <script src="/jarvis/js/app-ac9b18b06c8b8b35f136.js"></script>
+  <script src="/jarvis/js/app-40a6ab64e2c8ef467e4c.js"></script>
    
 </body>
 

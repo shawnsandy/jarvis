@@ -55,7 +55,7 @@
             </p>
         </div>
         <div class="col-md-12">
-            @include('jarvis::partials.messages')
+            @include(Jarvis::views('partials.messages'))
         </div>
     </div>
 </div>

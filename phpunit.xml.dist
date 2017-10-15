@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="vendor/autoload.php"
+<phpunit bootstrap="tests/bootstrap.php"
          backupGlobals="false"
          backupStaticAttributes="false"
          colors="true"
@@ -24,6 +24,7 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="APP_URL" value="laradev.app"/>
     </php>
     <logging>
         <log type="tap" target="build/report.tap"/>

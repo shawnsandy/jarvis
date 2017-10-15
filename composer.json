@@ -1,62 +1,62 @@
 {
-    "name": "shawnsandy/jarvis",
-    "type": "library",
-    "description": "A simple and smart theme management package for Laravel",
-    "keywords": [
-        "shawnsandy",
-        "jarvis"
-    ],
-    "homepage": "https://github.com/shawnsandy/jarvis",
-    "license": "MIT",
-    "authors": [{
-        "name": "Shawn Sandy",
-        "email": "shawnsandy04@gmail.com",
-        "homepage": "https://github.com/shawnsandy",
-        "role": "Developer"
-    }],
-    "require": {
-        "php": "~5.6|~7.0",
-        "illuminate/contracts": "~5.4|~5.5",
-        "illuminate/http": "~5.4|~5.5",
-        "illuminate/support": "~5.4|~5.5"
+  "name": "shawnsandy/jarvis",
+  "type": "library",
+  "description": "A simple and smart theme management package for Laravel",
+  "keywords": ["shawnsandy", "jarvis"],
+  "homepage": "https://github.com/shawnsandy/jarvis",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Shawn Sandy",
+      "email": "shawnsandy04@gmail.com",
+      "homepage": "https://github.com/shawnsandy",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "~5.6|~7.0",
+    "aedart/testing-laravel": "3.*",
+    "erusev/parsedown": "^1.6",
+    "illuminate/contracts": "~5.4|~5.5",
+    "illuminate/http": "~5.4|~5.5",
+    "illuminate/support": "~5.4|~5.5",
+    "michelf/php-markdown": "^1.7"
+  },
+  "require-dev": {
+    "orchestra/testbench": "~3.0",
+    "orchestra/testbench-browser-kit": "~3.5",
+    "phpunit/phpunit": "~4.0||~5.0||~6.0",
+    "squizlabs/php_codesniffer": "^3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "ShawnSandy\\Jarvis\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ShawnSandy\\Jarvis\\Test\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "check-style":
+      "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+    "fix-style":
+      "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
     },
-    "require-dev": {
-        "phpunit/phpunit": "~4.0||~5.0||~6.0",
-        "squizlabs/php_codesniffer": "^2.3"
-    },
-    "autoload": {
-        "psr-4": {
-            "ShawnSandy\\Jarvis\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "ShawnSandy\\Jarvis\\": "tests"
-        }
-    },
-    "scripts": {
-        "test": "phpunit",
-        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
-        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-      "extra": {
-          "laravel": {
-              "providers": [
-                 //"ShawnSandy\Jarvis\\JarvisServicesProvider"
-              ],
-              "aliases": {
-                  //"Jarvis": "ShawnSandy\Jarvis\\JarvisFacade"
-              }
-          }
-
+    "laravel": {
+      "providers": ["ShawnSandy\\Jarvis\\JarvisServicesProvider"],
+      "aliases": {
+        "Jarvis": "ShawnSandy\\Jarvis\\JarvisFacade"
       }
-
+    }
+  }
 }
