@@ -1,5 +1,5 @@
 @if (count($errors) > 0)
-    <div class="notification is-danger">
+    <div class="notification is-danger has-text-centered">
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>

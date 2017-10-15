@@ -57,9 +57,11 @@ class Jarvis
              * view = "jarvisThemes::".config(jarvis.view)."." -- jarvisTheme::jarvis.
              */
 
+        if($theme) config(["jarvis.view" => $theme]);
+        
         $jarvis = config("jarvis.view");
 
-		$view = $theme ? "jarvisThemes::{$jarvis}" : "{$jarvis}::";
+		$view = $theme ? "jarvisThemes::{$jarvis}." : "{$jarvis}::";
 
 		if(is_null(config("jarvis.view"))) {
 			$view = null;

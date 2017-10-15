@@ -16,7 +16,7 @@ return [
         "email" => "me@acme.com",
         "website" => "http://",
         "name" => "Acme",
-        "view" => "acme",
+        "view" => "acme_inc",
         "description" => "Sample template",
         "options" => [],
         "fields" => []

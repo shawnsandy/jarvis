@@ -31,13 +31,13 @@ class InstallsController extends JarvisController
             if (!$view)
                 File::makeDirectory(base_path("themes/" . $validate["view_path"]), null, true);
 
-            File::copyDirectory($this->views, base_path("themes/" . $validate["view_path"]));
+           // File::copyDirectory($this->views, base_path("themes/" . $validate["view_path"]));
 
             config(["jarvis.view", $validate["view_path"]]);
 
-            $theme_dir = jarvis_views(".index", $validate["view_path"]);
+            $theme_dir = jarvis_views("index", $validate["view_path"]);
 
-            $theme = File::exists($theme_dir);
+            $theme = view()->exists($theme_dir);
 
 
 

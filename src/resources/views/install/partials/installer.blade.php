@@ -4,7 +4,6 @@
 
         <div class="column is-8 is-offset-2">
 
-
             <div class="content is-small">
 
                 <div class="section">
@@ -23,7 +22,7 @@
 
                             <div class="field has-addons has-addons-centered is-large">
                                 <p class="control has-icons-left">
-                                    <input name="admin_key" class="admin_key input is-medium" type="text" placeholder="Enter theme admin key" required min="4" max="25" autocomplete="off">
+                                    <input name="admin_key" class="admin_key input is-medium" type="text" placeholder="Enter theme admin key" required min="4" max="25"  autocomplete="off">
                                     {{ csrf_field() }}
                                     <span class="icon">
                                         <i class="ion-lock-combination"></i>
@@ -66,10 +65,17 @@
                     <div class="column">{{ $item["description"] }}</div>
                     <div class="column">{{ $item["author"] }}</div>
                     <div class="column">
-                        jarvisThemes::{{ $key }}
+                        jarvisThemes::{{ $item["view"] }}
                     </div>
                     <div class="column">
-                        <a href="/" class="button osw install is-small">Install</a>
+                        <form name="{{ $item['name'] }}" action="{{ jarvis_url("themes/installs") }}" method="post">
+                        <input name="validation_key" class="input validation_key is-medium" type="hidden" placeholder="">
+                        <input name="view_path" value="{{ $item['view'] }}" class="input is-medium" type="hidden" placeholder="Name of view directory" required min="4" max="25">
+
+                        {{ csrf_field() }}
+
+                        <button type="submit" class="button osw install is-small">Install</button>
+                        </form>
                     </div>
 
                 </div>
@@ -96,7 +102,8 @@
         <div class="field has-addons has-addons-centered is-large">
             <p class="control has-icons-left">
 
-                <input name="view_path" class="input is-medium" type="text" placeholder="Name of view directory" required min="4" max="25"> {{ csrf_field() }}
+                <input name="view_path" class="input is-medium" type="text" placeholder="Name of view directory" required min="4" max="25">
+                {{ csrf_field() }}
                 <span class="icon is-medium">
                     <i class="ion-paintbucket"></i>
                 </span>
