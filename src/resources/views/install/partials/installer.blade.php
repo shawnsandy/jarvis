@@ -7,7 +7,7 @@
 
             <div class="content is-small">
 
-                <div class="section">
+                <div class="section-">
 
                     @include(Jarvis::views("install.partials.headline"))
 
@@ -16,7 +16,6 @@
 
 
                         <p>Publish theme views, assets, configuration to default Laravel directories</p>
-
 
 
                         <form action="/jarvis/themes/publish" class="has-text-centered create-view" method="post">
@@ -49,6 +48,13 @@
                     </div>
 
                 </div>
+
+</div>
+                <h2 class="headliners subtitle has-text-centered is-3">
+        Available Themes
+    </h2>
+ <div class="content is-small">
+
                 <div class="columns bar">
                     <div class="column">Name</div>
                     <div class="column">Description</div>
@@ -96,7 +102,7 @@
 
 
     <h2 class="headliners subtitle has-text-centered is-3">
-        Copy & Create Theme
+        Copy Theme
     </h2>
 
     <form action="{{ jarvis_url("themes/installs") }}" class="has-text-centered create-view" method="post">
@@ -119,10 +125,5 @@
         <p class="is-size-7 is-warning key-required fade">* Theme admin key is required, please enter it above</p>
 
     </form>
-
-</div>
-
-<div class="section has-text-centered">
-<button class="button is-medium start-button osw">Cancel</button>
 
 </div>

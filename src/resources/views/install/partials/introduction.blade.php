@@ -4,14 +4,9 @@
 
     <div class="column is-8 is-offset-2">
 
-    @theme("jarvis")
 
-    @else
 
-    @include(jarvis_view("install.partials.intro"))
-
-    @endtheme
-
+    @include(jarvis_views("install.partials.intros"))
 
 
         <div class="section has-text-centered">
