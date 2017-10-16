@@ -9,7 +9,15 @@
 
                 <div class="section-">
 
-                    @include(Jarvis::views("install.partials.headline"))
+                    <div class="headliners is-uppercase subtitle is-1 has-text-centered">
+    <span class="icon">
+    <i class="ion-grid"></i>
+    </span>
+    <span>
+    Manage &amp Install Themes
+    </span>
+
+</div>
 
 
                     <div class="content has-text-centered">
