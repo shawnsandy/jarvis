@@ -2,6 +2,7 @@
 
     namespace ShawnSandy\Jarvis;
 
+    use Blade;
     use Illuminate\Support\ServiceProvider;
     use Illuminate\Database\Eloquent\Factory;
 
@@ -60,6 +61,8 @@
             $this->themeDisk();
 
             $this->themeSetup();
+
+            $this->directives();
 
         }
 
@@ -163,7 +166,8 @@
         /**
          * Set the config for
          */
-        protected function themeDisk() {
+        protected function themeDisk()
+        {
 
         }
 
@@ -182,10 +186,23 @@
 
             config(["filesystems.disks.themes" => [
                 "driver" => "local",
-                "root" => base_path("themes/".config("jarvis.view")),
+                "root" => base_path("themes/" . config("jarvis.view")),
                 "url" => config("app.url"),
                 "visibility" => "public"
             ]]);
+
+        }
+
+        protected function directives()
+        {
+
+            Blade::if ('themeExists', function ($theme, $namespace = null) {
+
+                $view = $namespace ? $namespace.'::'.$theme.".index" : $theme."::index";
+
+                return view()->exists($view);
+
+            });
 
         }
 

@@ -3,6 +3,7 @@
 
 
         <div class="column is-8 is-offset-2">
+          @include(jarvis_views("partials.messages"))
 
             <div class="content is-small">
 
@@ -65,6 +66,7 @@
                     <div class="column">{{ $item["description"] }}</div>
                     <div class="column">{{ $item["author"] }}</div>
                     <div class="column">
+
                         jarvisThemes::{{ $item["view"] }}
                     </div>
                     <div class="column">

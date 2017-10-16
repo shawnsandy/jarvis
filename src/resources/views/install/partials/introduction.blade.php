@@ -4,8 +4,10 @@
 
     <div class="column is-8 is-offset-2">
 
-        <p class="subtitle is-2 headliners is-uppercase">
-            <i class="fa fa-quote-left"></i> Whoops! It appears that we have not been formally introduced, lets fix that.
+    @themeExists("jarvis")
+
+  <p class="subtitle is-2 headliners is-uppercase">
+                                                               <i class="fa fa-quote-left"></i> Whoops! It appears that we have not been formally introduced, lets fix that
         </p>
 
         <hr>
@@ -25,9 +27,13 @@
             <p>
                 <a href="" class="contribute-button">Contributions</a> are always welcomed, please feel free to submit a
                 PR, feature, fix or fork and create you own.
-            </p>
+                        </p>
 
         </div>
+
+
+
+    @endthemeExists
 
 
 
