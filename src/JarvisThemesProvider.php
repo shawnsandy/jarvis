@@ -101,7 +101,7 @@
 
             $this->publishes(
                 [
-                    __DIR__ . '/resources/views' => resource_path('views/vendor/' . config("jarvis.view", "jarvis")),
+                    __DIR__ . '/resources/views' => resource_path('views/vendor/jarvis'),
                 ], 'jarvis-views'
             );
 
@@ -175,14 +175,7 @@
         {
 
             $view_path = base_path("themes/");
-
             $this->loadViewsFrom($view_path, 'jarvisThemes');
-
-            $this->publishes(
-                [
-                    __DIR__ . '/resources/views' => $view_path,
-                ], 'jarvis-themes'
-            );
 
             config(["filesystems.disks.themes" => [
                 "driver" => "local",
