@@ -196,9 +196,9 @@
         protected function directives()
         {
 
-            Blade::if ('themeExists', function ($theme, $namespace = null) {
+            Blade::if ('theme', function ($theme, $namespace = null) {
 
-                $view = $namespace ? $namespace.'::'.$theme.".index" : $theme."::index";
+                $view = $namespace ? $namespace.'::'.$theme.".index" : "vendor".$theme.".index";
 
                 return view()->exists($view);
 

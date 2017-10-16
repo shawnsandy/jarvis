@@ -4,7 +4,9 @@
 
     <div class="column is-8 is-offset-2">
 
-    @themeExists("jarvis")
+    @theme("jarvis")
+
+    @else
 
   <p class="subtitle is-2 headliners is-uppercase">
                                                                <i class="fa fa-quote-left"></i> Whoops! It appears that we have not been formally introduced, lets fix that
@@ -33,7 +35,7 @@
 
 
 
-    @endthemeExists
+    @endtheme
 
 
 
