@@ -1,45 +1,70 @@
 # Jarvis (alpha)
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
+Jarvis is a simple and smart way to create, package and
+        manage Laravel views (themes) built with the
+        <a href="https://github.com/shawnsandy/jarvis-toolkit" class="headliners target="_blank">Jarvis toolkit,</a> thats me :) yay.
 
-**Note:** To replace ```Shawn Sandy``` ```shawnsandy``` ```https://github.com/shawnsandy``` ```shawnsandy04@gmail.com``` ```shawnsandy``` ```jarvis``` ```A simple and smart theme management package for Laravel``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files. You can change them manually or run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
 
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practises by being named the following.
-
-```
-bin/
-config/
-src/
-tests/
-vendor/
-```
 
 
 ## Install
 
 Via Composer
 
+* To install the Alpha version. Load package from VCS repository, add the following to your composer.json
+
+```
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/shawnsandy/jarvis"
+        }
+    ],
+
+```
+* From command line run the following
+
 ``` bash
-$ composer require shawnsandy/jarvis
+
+composer require shawnsandy/jarvis dev-master
+
 ```
 
 ## Usage
 
-``` php
+__Quick Start__
 
-/////
+* Add the VALIDATION_KEY to you Laravel .env file
+
+``` text
+
+VALIDATION_KEY=1234567890
+
 
 ```
+
+* Open `routes\wep.php` and add the following to you routes
+
+``` php
+
+Route::group(['prefix' => config("jarvis.base_url")], function () {
+
+
+    // theme setup and install routes
+    Jarvis::install_routes();
+    // pages
+    Jarvis::routes();
+
+});
+
+
+```
+
+* To install and publish theme files go to  `yourapp.com/jarvis/themes/index`, click on the `Lets get started` button. Enter the validation_key in the and hit `Publish Vendor files`. You should be set to go.
+
+* To visit a demo page go to `yourapp.com/jarvis/view/index`
+
 
 ## Change log
 
@@ -67,18 +92,3 @@ If you discover any security related issues, please email shawnsandy04@gmail.com
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-[ico-version]: https://img.shields.io/packagist/v/shawnsandy/jarvis.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/shawnsandy/jarvis/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/shawnsandy/jarvis.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/shawnsandy/jarvis.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/shawnsandy/jarvis.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/shawnsandy/jarvis
-[link-travis]: https://travis-ci.org/shawnsandy/jarvis
-[link-scrutinizer]: https://scrutinizer-ci.com/g/shawnsandy/jarvis/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/shawnsandy/jarvis
-[link-downloads]: https://packagist.org/packages/shawnsandy/jarvis
-[link-author]: https://github.com/shawnsandy
-[link-contributors]: ../../contributors
