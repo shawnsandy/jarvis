@@ -1,8 +1,7 @@
 # Jarvis (alpha)
 
 Jarvis is a simple and smart way to create, package and
-        manage Laravel views (themes) built with the
-        <a href="https://github.com/shawnsandy/jarvis-toolkit" class="headliners target="_blank">Jarvis toolkit,</a> thats me :) yay.
+        manage Laravel views (themes).
 
 
 
@@ -44,7 +43,7 @@ VALIDATION_KEY=1234567890
 
 ```
 
-* Open `routes\wep.php` and add the following to you routes
+* Open `routes\wep.php` and add the following routes
 
 ``` php
 
@@ -53,7 +52,7 @@ Route::group(['prefix' => config("jarvis.base_url")], function () {
 
     // theme setup and install routes
     Jarvis::install_routes();
-    // pages
+    // Demo pages
     Jarvis::routes();
 
 });
