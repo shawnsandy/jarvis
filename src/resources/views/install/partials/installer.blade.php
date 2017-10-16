@@ -3,21 +3,20 @@
 
 
         <div class="column is-8 is-offset-2">
-          @include(jarvis_views("partials.messages"))
+
+            @include(jarvis_views("partials.messages"))
 
             <div class="content is-small">
 
                 <div class="section-">
 
                     <div class="headliners is-uppercase subtitle is-1 has-text-centered">
-    <span class="icon">
-    <i class="ion-grid"></i>
-    </span>
-    <span>
-    Manage &amp Install Themes
-    </span>
 
-</div>
+                        <span>
+                            Manage &amp Install Themes
+                        </span>
+
+                    </div>
 
 
                     <div class="content has-text-centered">
@@ -30,38 +29,36 @@
 
                             <div class="field has-addons has-addons-centered is-large">
                                 <p class="control has-icons-left">
-                                    <input name="admin_key" class="admin_key input is-medium" type="text" placeholder="Enter theme admin key" required min="4" max="25"  autocomplete="off">
-                                    {{ csrf_field() }}
+                                    <input name="admin_key" class="admin_key input is-medium" type="text" placeholder="Enter theme admin key" required min="4"
+                                        max="25" autocomplete="off"> {{ csrf_field() }}
                                     <span class="icon">
                                         <i class="ion-lock-combination"></i>
                                     </span>
                                 </p>
                                 <p class="control">
                                     <button type="submit" class="button is-info is-medium rounded-right-border">
-                                        <span class="is-size-6">Publish Files</span>
+                                        <span class="is-size-6">Publish Vendor Files</span>
                                     </button>
                                 </p>
                             </div>
                             @if(view()->exists("vendor/".config("jarvis.base_url")."/index"))
                             <div class="is-7 has-text-warning">
-                            <span class="has-text-danger">Warning publishing will overwrite existing vendor files. Copy and Create a new theme if you wish to modify views</span>
+                                <span class="has-text-danger">Warning publishing will overwrite existing vendor files. Copy and Create a new theme if you
+                                    wish to modify views</span>
                             </div>
                             @endif
 
                         </form>
 
-
-
-
                     </div>
 
                 </div>
 
-</div>
-                <h2 class="headliners subtitle has-text-centered is-3">
-        Available Themes
-    </h2>
- <div class="content is-small">
+            </div>
+            <h2 class="headliners subtitle has-text-centered is-3">
+                Available Themes
+            </h2>
+            <div class="content is-small">
 
                 <div class="columns bar">
                     <div class="column">Name</div>
@@ -84,13 +81,12 @@
                         jarvisThemes::{{ $item["view"] }}
                     </div>
                     <div class="column">
-                        <form name="{{ $item['name'] }}" action="{{ jarvis_url("themes/installs") }}" method="post">
-                        <input name="validation_key" class="input validation_key is-medium" type="hidden" placeholder="">
-                        <input name="view_path" value="{{ $item['view'] }}" class="input is-medium" type="hidden" placeholder="Name of view directory" required min="4" max="25">
+                        <form name="{{ $item['name'] }}" action="{{ jarvis_url(" themes/installs ") }}" method="post">
+                            <input name="validation_key" class="input validation_key is-medium" type="hidden" placeholder="">
+                            <input name="view_path" value="{{ $item['view'] }}" class="input is-medium" type="hidden" placeholder="Name of view directory"
+                                required min="4" max="25"> {{ csrf_field() }}
 
-                        {{ csrf_field() }}
-
-                        <button type="submit" class="button osw install is-small">Install</button>
+                            <button type="submit" class="button osw install is-small">Install</button>
                         </form>
                     </div>
 
@@ -113,13 +109,12 @@
         Copy Theme
     </h2>
 
-    <form action="{{ jarvis_url("themes/installs") }}" class="has-text-centered create-view" method="post">
-<input name="validation_key" class="input validation_key is-medium" type="hidden" placeholder="">
+    <form action="{{ jarvis_url(" themes/installs ") }}" class="has-text-centered create-view" method="post">
+        <input name="validation_key" class="input validation_key is-medium" type="hidden" placeholder="">
         <div class="field has-addons has-addons-centered is-large">
             <p class="control has-icons-left">
 
-                <input name="view_path" class="input is-medium" type="text" placeholder="Name of view directory" required min="4" max="25">
-                {{ csrf_field() }}
+                <input name="view_path" class="input is-medium" type="text" placeholder="Name of view directory" required min="4" max="25"> {{ csrf_field() }}
                 <span class="icon is-medium">
                     <i class="ion-paintbucket"></i>
                 </span>

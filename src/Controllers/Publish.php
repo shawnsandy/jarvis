@@ -11,16 +11,14 @@ class Publish extends JarvisController
 {
 
 	public function __invoke(Request $request)
-			    {
-
-
+	{
 
 		$validate = $request->validate(["admin_key" => "required|alpha_dash"]);
 
 		if($validate["admin_key"] == config("jarvis.validation_key")):
 
 		Artisan::call("vendor:publish", [
-            "--tag" => "jarvis-views",
+            "--provider" => "ShawnSandy\Jarvis\JarvisThemesProvider",
             "--force" => true,
             ]);
 		return back()->with("success", "Your vendor files have been published Sir.");
