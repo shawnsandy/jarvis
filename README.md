@@ -3,7 +3,7 @@
 Jarvis is a simple and smart way to create, package and
         manage Laravel views (themes).
 
-
+![Alt text](/jarvis-theme-cover.jpeg?raw=true)
 
 
 
@@ -58,8 +58,12 @@ Route::group(['prefix' => config("jarvis.base_url")], function () {
 
 * To install and publish theme files go to  `yourapp.com/jarvis/themes/index`, click on the `Lets get started` button. Enter the validation_key in the and hit `Publish Vendor files`. You should be set to go.
 
-* To visit a demo page go to `yourapp.com/jarvis/view/index`
+![Alt text](/jarvis-setup.jpg?raw=true)
 
+![Alt text](/jarvis-install.jpeg?raw=true)
+
+
+* To visit a demo page go to `yourapp.com/jarvis/view/index`
 
 ## Change log
 
