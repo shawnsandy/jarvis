@@ -4,7 +4,6 @@
 
         <div class="column is-8 is-offset-2">
 
-            @include(jarvis_views("partials.messages"))
 
             <div class="content is-small">
 
@@ -109,7 +108,7 @@
         Copy Theme
     </h2>
 
-    <form action="{{ jarvis_url(" themes/installs ") }}" class="has-text-centered create-view" method="post">
+    <form action="{{ jarvis_url("themes/installs") }}" class="has-text-centered create-view" method="post">
         <input name="validation_key" class="input validation_key is-medium" type="hidden" placeholder="">
         <div class="field has-addons has-addons-centered is-large">
             <p class="control has-icons-left">
