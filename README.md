@@ -11,7 +11,7 @@ Jarvis is a simple and smart way to create, package and
 
 Via Composer
 
-* To install the Alpha version. Load package from VCS repository, add the following to your composer.json
+* To install the Alpha version, add the following VCS repository add the following to your composer.json
 
 ```
 "repositories": [
@@ -34,11 +34,11 @@ composer require shawnsandy/jarvis dev-master
 
 __Quick Start__
 
-* Add the VALIDATION_KEY to you Laravel .env file
+* Add the VALIDATION_KEY to you Laravel .env file *min 8 characters, numbers letters, underscore, dashes*
 
 ``` text
 
-VALIDATION_KEY=1234567890
+VALIDATION_KEY=1234567890_valdiation-key
 
 
 ```
@@ -48,15 +48,11 @@ VALIDATION_KEY=1234567890
 ``` php
 
 Route::group(['prefix' => config("jarvis.base_url")], function () {
-
-
     // theme setup and install routes
     Jarvis::install_routes();
     // Demo pages
     Jarvis::routes();
-
 });
-
 
 ```
 
