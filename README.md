@@ -60,7 +60,9 @@ Route::group(['prefix' => config("jarvis.base_url")], function () {
 
 ![Alt text](/jarvis-setup.jpg?raw=true)
 
-![Alt text](/jarvis-installs.jpeg?raw=true)
+
+![Alt text](/jarvis-install.jpeg?raw=true)
+
 
 
 * To visit a demo page go to `yourapp.com/jarvis/view/index`
