@@ -190,7 +190,7 @@
         {
 
             Blade::if ('themeExists', function ($theme, $namespace = null) {
-                $view = $namespace ? $namespace.'::'.$theme.".index" : "vendor.".$theme.".index";
+                $view = $namespace ? $namespace.'::'.$theme.".views.index" : "vendor.".$theme.".index";
                 return view()->exists($view);
 
             });

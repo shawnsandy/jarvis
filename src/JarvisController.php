@@ -13,8 +13,8 @@ class JarvisController extends Controller
     {
 
         $this->views = __DIR__."/resources/views";
-        $this->resources = __DIR__."/resources/";
-        $this->resources = __DIR__."../README.md";
+        $this->resources = __DIR__."/resources";
+        $this->readme = __DIR__."../README.md";
 
     }
 
