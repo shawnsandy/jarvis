@@ -1,6 +1,6 @@
 # Jarvis (alpha)
 
-Jarvis is a simple and smart way to create, package and
+Jarvis is a simple and smart way to create and
         manage Laravel views (themes).
 
 ![Alt text](/jarvis-theme-cover.jpeg?raw=true)

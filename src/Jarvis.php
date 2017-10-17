@@ -54,7 +54,7 @@
 
             $jarvis = config("jarvis.view");
 
-            $view = $theme ? "jarvisThemes::{$jarvis}.views." : "{$jarvis}::";
+            $view = $theme ? "jarvisThemes::{$theme}.views." : "{$jarvis}::";
 
             if (is_null(config("jarvis.view"))) {
                 $view = null;
