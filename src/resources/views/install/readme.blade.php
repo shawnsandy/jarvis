@@ -7,7 +7,7 @@
                 @include(Jarvis::views("install.partials.headline"))
                 <hr>
             </div>
-            <div class="content is-medium">
+            <div class="content">
                 {!! $page !!}
             </div>
 
