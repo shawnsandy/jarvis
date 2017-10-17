@@ -57,6 +57,7 @@ Route::group(['prefix' => config("jarvis.base_url")], function () {
 ![Alt text](/jarvis-install.jpeg?raw=true)
 
 
+
 * To visit a demo page go to `yourapp.com/jarvis/view/index`
 
 ## Change log
