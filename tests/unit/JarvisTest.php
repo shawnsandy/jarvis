@@ -114,13 +114,13 @@ class JarvisTest extends TestCase
 
 
 		/** change the view_path */
-		config(["jarvis.view" => "default"]);
+		config(["jarvis.view" => "theme"]);
 
 
 
 
 		/** get the view with new path */
-		$dynamic_view = jarvis_views("index");
+		$dynamic_view = jarvis_views("index", "theme");
 
 
 
@@ -138,9 +138,9 @@ class JarvisTest extends TestCase
 
 		$this->assertEquals("jarvis::index", $default_view);
 
-		$this->assertEquals("default::index", $dynamic_view);
+		$this->assertEquals("jarvisThemes::theme.views.index", $dynamic_view);
 
-		$this->assertEquals("index", $null_view);
+		$this->assertEquals("jarvis::index", $null_view);
 
 
 	}
@@ -160,18 +160,16 @@ class JarvisTest extends TestCase
 		$default_view = Jarvis::views("index");
 
 
-
 		/** change the view_path */
 		config(["jarvis.view" => "default"]);
 
 
-
 		/** get the view with new path */
-		$dynamic_view = Jarvis::views("index");
+		$dynamic_view = Jarvis::views("index","default");
 
 		$this->assertEquals("jarvis::index", $default_view);
 
-		$this->assertEquals("default::index", $dynamic_view);
+		$this->assertEquals("jarvisThemes::default.views.index", $dynamic_view);
 
 	}
 

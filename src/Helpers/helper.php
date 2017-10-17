@@ -20,9 +20,9 @@ function jarvis_url($route)
  * @param  string $view_path
  * @return string
  */
-function jarvis_views($view_path, $from_themes = false)
+function jarvis_views($view_path, $theme = false)
 {
-    return jarvis()->views($view_path, $from_themes);
+    return jarvis()->views($view_path, $theme);
 }
 
 function jarvis()

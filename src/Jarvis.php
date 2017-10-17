@@ -49,12 +49,13 @@
          */
         public function views($blade, $theme = null)
         {
+            $namespace = $theme ? "jarvisThemes" : "jarvis";
 
-            if ($theme) config(["jarvis.view" => $theme]);
+            config(["jarvis.view" => $namespace]);
 
             $jarvis = config("jarvis.view");
 
-            $view = $theme ? "jarvisThemes::{$theme}.views." : "{$jarvis}::";
+            $view = $theme ? "{$jarvis}::{$theme}.views." : "{$jarvis}::";
 
             if (is_null(config("jarvis.view"))) {
                 $view = null;
