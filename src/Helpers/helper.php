@@ -32,7 +32,7 @@ function jarvis_views($view_path, $theme = false)
  * @param string $theme set the theme config name
  * @return void
  */
-function theme($theme)
+function jarvis_theme($theme)
 {
     jarvis()->theme($theme);
 }
