@@ -7,7 +7,6 @@ return [
     "validation_key" => env("VALIDATION_KEY", 00000000),
     "base_url" => "jarvis",
     "view" => env("DEFAULT_VIEW", "jarvis"),
-    "theme" => env("DEFAULT_THEME", "jarvis"),
     "title" => "Jarvis | A smart theme management package for Laravel",
     "themes" => [
 

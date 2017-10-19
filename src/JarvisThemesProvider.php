@@ -198,7 +198,7 @@
 
             Blade::directive("theme", function($theme){
 
-                config(["jarvis.view" => $theme]);
+                config(["jarvis.theme" => $theme]);
                 return null;
 
             });
