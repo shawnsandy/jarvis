@@ -34,7 +34,7 @@ function jarvis_views($view_path, $theme = false)
  */
 function jarvis_theme($theme)
 {
-    jarvis()->theme($theme);
+   return jarvis()->theme($theme);
 }
 
 function jarvis()
