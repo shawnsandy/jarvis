@@ -25,6 +25,18 @@ function jarvis_views($view_path, $theme = false)
     return jarvis()->views($view_path, $theme);
 }
 
+
+/**
+ * Set the theme
+ *
+ * @param string $theme set the theme config name
+ * @return void
+ */
+function theme($theme)
+{
+    jarvis()->theme($theme);
+}
+
 function jarvis()
 {
     return app("Jarvis");
