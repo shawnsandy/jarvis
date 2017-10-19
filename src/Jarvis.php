@@ -93,7 +93,7 @@
         public function theme($theme)
         {
 
-            config(["jarvis.theme" => $theme]);
+           return config(["jarvis.theme" => $theme]);
 
         }
 
