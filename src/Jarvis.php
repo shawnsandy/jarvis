@@ -49,7 +49,7 @@
          */
         public function views($blade, $theme = null)
         {
-            if(config("jarvis.theme"))
+            if(config("jarvis.theme") && is_null($theme))
             $theme = config("jarvis.theme");
 
             if(!is_null($theme)):
@@ -67,6 +67,33 @@
             }
 
             return $view . $blade;
+
+        }
+
+        /**
+         * Load views
+         *
+         * @param  string $blade path to your blade file `partials.example`.
+         * @param bool    $theme the name of the theme
+         * @return string
+         */
+        public function view($blade, $theme = null)
+        {
+            $this->views($blade, $theme);
+        }
+
+
+
+        /**
+         * Set the theme
+         *
+         * @param [type] $theme
+         * @return void
+         */
+        public function theme($theme)
+        {
+
+            config(["jarvis.theme" => $theme]);
 
         }
 
