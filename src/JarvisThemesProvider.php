@@ -195,6 +195,14 @@
 
             });
 
+
+            Blade::directive("theme", function($theme){
+
+                config(["jarvis.view" => $theme]);
+                return null;
+
+            });
+
         }
 
     }
