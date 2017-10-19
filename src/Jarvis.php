@@ -49,7 +49,7 @@
          */
         public function views($blade, $theme = null)
         {
-            if(config("jarvis.theme"))
+            if(config("jarvis.theme") && is_null($theme))
             $theme = config("jarvis.theme");
 
             if(!is_null($theme)):
