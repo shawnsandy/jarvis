@@ -28,9 +28,9 @@
 
     <section class="section header">
         <div class="container">
-            <h1 class="title">ACME INC</h1>
+            <h1 class="title">{{ config("jarvis.name") }}</h1>
             <h2 class="subtitle">
-                A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+                {{ config("jarvis.description") }}
             </h2>
         </div>
     </section>
