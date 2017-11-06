@@ -82,6 +82,39 @@
 						ex ut sint eveniet dicta similique aut neque unde dolorum nobis, quidem blanditiis impedit reiciendis consectetur eligendi.
 					</p>
 				</div>
+                <div>
+                <div class="card-content">
+                <p class="subtitle is-3"><i class="im im-users"></i> User Roles</p>
+                @component("dashauth::forms.roles", [ "user" => Auth::user() ])
+                @slot('btn_class')  button is-info is-large is-uppercase  @endslot
+                @endcomponent
+                </div>
+
+                <div class="card-content">
+                @component('dashauth::components.privileges')
+
+                @endcomponent
+                </div>
+
+                <div class="card-content">
+                @component('dashauth::components.roles.form',  [ "user" => Auth::user() ])
+
+                @slot('remove_role')
+                    @component('dashauth::components.roles.button-remove-role')
+
+                    @endcomponent
+                @endslot
+
+                @slot('assign_role')
+                @component('dashauth::components.roles.button-assign-role')
+
+                @endcomponent
+                @endslot
+
+                @endcomponent
+                </div>
+
+                </div>
 			</div>
 
 			<div class="section"></div>
