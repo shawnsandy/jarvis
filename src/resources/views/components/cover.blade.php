@@ -10,12 +10,8 @@
 
         </div>
 
-        <div class="container search">
-            <div class="navbar">
-                <div class="container">
-                    <span class="navbar-item subtitle is-4">Search</span>
-                </div>
-            </div>
+        <div class="container search-">
+
         </div>
 
     </section>
