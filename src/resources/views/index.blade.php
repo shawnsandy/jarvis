@@ -1,15 +1,18 @@
 @php
 $theme_class = "front-page";
 @endphp
-@extends(jarvis_views('layouts.theme')) @section('content') @include(jarvis_views('components.cover'))
+@extends(jarvis_views('layouts.theme'))
+@section('content')
+@include(jarvis_views('components.cover'))
 
 <section class="actions section is-medium">
 
     <div class="container">
         <div class="columns">
             <div class="column">
-                <h1 class="subtitle is-1 has-text-centered">
-                    Blanditiis accusantium doloribus quam at. Aliquam possimus, sequi quos optio maxime deserunt dolor modi facilis!
+                <h1 class="subtitle is-2 has-text-centered">
+                    Jarvis is a simply smart way to create and
+        manage Laravel views (themes).
                 </h1>
 
             </div>

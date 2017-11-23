@@ -40,7 +40,6 @@ class InstallsController extends JarvisController
             $theme = view()->exists($theme_dir);
 
 
-
             if ($theme)
                 return back()->with("success", "Sir, your theme has been copied you can now begin customization");
 

@@ -28,6 +28,12 @@ Via Composer
 composer require shawnsandy/jarvis dev-master
 ```
 
+### Laravel 5.5x Bluma presets
+
+- Install
+
+>Install this preset via composer `require laravel-frontend-presets/bulma`. Laravel 5.5.x will automatically discover this package for you
+
 ## Usage
 
 __Quick Start__

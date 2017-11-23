@@ -6,11 +6,11 @@
     <title>
 
     </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <link href="/jarvis/css/blokkfont-b2e761c39d.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.2.0/css/iconmonstr-iconic-font.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     @include(Jarvis::views('partials.header'))
 
     @stack('styles')
@@ -28,10 +28,10 @@
 
     <section class="section header">
         <div class="container">
-            <h1 class="title">{{ config("jarvis.name") }}</h1>
-            <h2 class="subtitle">
+            <p class="title is-size-4 is-uppercase">{{ config("jarvis.name") }}</p>
+            <p class="subtitle is-5">
                 {{ config("jarvis.description") }}
-            </h2>
+            </p>
         </div>
     </section>
 

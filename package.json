@@ -13,6 +13,7 @@
         "copy:aos": "cp -R node_modules/aos/dist src/public/vendor/aos/",
         "setup": "npm run fonts && npm run animatecss && npm run font-awesome && npm run copy:aos",
         "watch:css": "onchange 'src/resources/assets/**/*.scss' -- npm run scss",
+        "dev": "onchange 'src/resources/assets/**/*.scss' -- npm run scss",
         "images": "imagemin images/bg/* --out-dir=src/public/img/bg -p",
         "gulp": "gulp copy:fonts"
     },

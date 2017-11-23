@@ -9,7 +9,7 @@ class JarvisController extends Controller
     public $read_me;
 
 
-    public function __construct() 
+    public function __construct()
     {
 
         $this->views = __DIR__."/resources/views";

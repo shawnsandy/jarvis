@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="/jarvis/css/app-e787fe0d66.css">
   <link rel="stylesheet" href="/jarvis/css/demo-b6a6c8cd86.css">
 
- <link rel="stylesheet" href="/jarvis/css/theme-f440cd0a67.css">
+ <link rel="stylesheet" href="/jarvis/css/theme-e0b0d860a2.css">
 
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -49,12 +49,13 @@
   </div>
     <section class="section header">
     <div class="container">
-      <h1 class="title">ACME INC</h1>
-      <h2 class="subtitle">
+      <p class="title is-4">ACME INC</p>
+      <p class="subtitle is-5">
         A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-      </h2>
+      </p>
     </div>
   </section>
+
   <!-- content -->
 
    <style>
@@ -65,26 +66,15 @@
 }
 </style>
 <section class="cover-fold">
-
     <div class="cover">
         <div>
             <div class="has-text-centered">
 
-                <h1 class="headline-h1 is-uppercase">FrontEnd</h1>
+                <h1 class="headline is-1 is-uppercase">FrontEnd</h1>
                 <h2 class="subtitle is-2 is-capitalized">A  UI toolkit for designers</h2>
             </div>
         </div>
-
     </div>
-
-    <div class="container search">
-        <div class="navbar">
-            <div class="container">
-               <span class="navbar-item subtitle is-4">Search</span>
-            </div>
-        </div>
-    </div>
-
 </section>
 
 
