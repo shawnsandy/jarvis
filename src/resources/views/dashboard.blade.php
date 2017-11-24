@@ -90,7 +90,7 @@
                 @endcomponent
                 </div>
 
-                <div class="card-content">
+                {{--  <div class="card-content">
                 @component('dashauth::components.privileges')
 
                 @endcomponent
@@ -112,7 +112,7 @@
                 @endslot
 
                 @endcomponent
-                </div>
+                </div>  --}}
 
                 </div>
 			</div>

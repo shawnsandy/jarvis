@@ -31,7 +31,7 @@
                     <nav class="navbar">
                         <div class="navbar-brand">
                             <a class="navbar-item toggle-sidebar">
-					<i class="im im-menu-list"></i> <span class="sidebar-text is-uppercase subtitle is-4">Admin</span>
+					<i class="im im-menu-list"></i> <span class="sidebar-text is-uppercase subtitle is-5">Admin</span>
 					</a>
                         </div>
                     </nav>
@@ -79,7 +79,7 @@
                     <nav class="navbar is-transparent">
                         <div class="navbar-brand">
                             <a href="/dashboard.html" class="navbar-item"> <i class="im im-radio-button-circle"></i> </a>
-                            <div class="navbar-item is-uppercase subtitle is-3 dashboard-name">
+                            <div class="navbar-item is-uppercase subtitle is-4 dashboard-name">
                                 Dashboard
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                     <div class="dashboard">
                         <div class="container-fluid">
                             <div class="section columns">
-                                <div class="column">
+                                {{--  <div class="column">
                                     <nav class="breadcrumb has-dot-separator" aria-label="breadcrumbs">
                                         <ul>
                                             <li><a href="#">Dashboard</a></li>
@@ -107,7 +107,7 @@
                                         </ul>
                                     </nav>
 
-                                </div>
+                                </div>  --}}
                             </div>
                         </div>
 
