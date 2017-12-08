@@ -35,8 +35,6 @@
         </div>
     </section>
 
-
-
     @yield('content')
 
     <footer class="footer section">

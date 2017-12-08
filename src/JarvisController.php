@@ -6,7 +6,7 @@ class JarvisController extends Controller
 {
     public $views;
     public $resources;
-    public $read_me;
+    public $readme;
 
 
     public function __construct()
