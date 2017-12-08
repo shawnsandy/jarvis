@@ -50,7 +50,7 @@ gulp.task("sass:watch", function() {
   gulp.watch("./src/scss", ["sass"]);
 });
 
-gulp.task("clone:html", function() {
+gulp.task("clone:frontend", function() {
   git.clone(
     "https://github.com/shawnsandy/frontend",
     { args: "./html" },
@@ -69,21 +69,12 @@ gulp.task("clone:html", function() {
 
 
 /**
- * run import task
- */
-gulp.task(
-  "imports",
-  ["import:views", "import:partials", "import:assets"],
-  function() {}
-);
-
-/**
  * imports views and converts them to blade.php files
  *
  */
 
 gulp.task("import:views", function() {
-  return gulp
+    return gulp
     .src("./html/theme/views/**/*.html", { base: "./html/theme/views" })
     .pipe(replace(".blade.php", ".html"))
     .pipe(replace_txt("stylesheets", "/" + config.theme_folder + "/css"))
@@ -98,9 +89,9 @@ gulp.task("import:views", function() {
  * partials should not be edited / modified
  */
 gulp.task("import:partials", function() {
-  return gulp
+    return gulp
     .src("./html/theme/views/partials/**/*.html", {
-      base: "./html/theme/views"
+        base: "./html/theme/views"
     })
     .pipe(replace(".blade.php", ".html"))
     .pipe(replace_txt("stylesheets", "/" + config.theme_folder + "/css"))
@@ -113,9 +104,9 @@ gulp.task("import:partials", function() {
  * imports assets into the public dir
  */
 gulp.task("import:assets", function() {
-  return gulp
+    return gulp
     .src(["./html/theme/public/css/**/*.css", "./html/theme/public/js/**/*.js"], {
-      base: "./html/theme/public"
+        base: "./html/theme/public"
     })
     .pipe(gulp.dest("./src/public"))
     .pipe(print());
@@ -129,3 +120,13 @@ gulp.task("import:sass", function(){
 })
 
 gulp.task("default", ["imports"], function() {});
+
+
+/**
+ * run import task
+ */
+gulp.task(
+  "imports",
+  ["import:views", "import:partials", "import:assets"],
+  function() {}
+);

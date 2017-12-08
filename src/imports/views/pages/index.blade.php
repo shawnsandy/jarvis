@@ -6,26 +6,15 @@
 }
 </style>
 <section class="cover-fold">
-
     <div class="cover">
         <div>
             <div class="has-text-centered">
 
-                <h1 class="headline-h1 is-uppercase">FrontEnd</h1>
+                <h1 class="headline is-1 is-uppercase">FrontEnd</h1>
                 <h2 class="subtitle is-2 is-capitalized">A  UI toolkit for designers</h2>
             </div>
         </div>
-
     </div>
-
-    <div class="container search">
-        <div class="navbar">
-            <div class="container">
-               <span class="navbar-item subtitle is-4">Search</span>
-            </div>
-        </div>
-    </div>
-
 </section>
 
 <section class="actions section is-medium">
@@ -33,7 +22,7 @@
     <div class="container">
         <div class="columns">
             <div class="column">
-                <h1 class="subtitle is-1 has-text-centered">
+                <h1 class="subtitle is-2 has-text-centered">
                     Blanditiis accusantium doloribus quam at. Aliquam possimus, sequi quos optio maxime deserunt dolor modi facilis!
                 </h1>
 
@@ -61,15 +50,18 @@
     </figure>
   </div>
   <div class="card-content">
-
+<div class="section">
     <div class="content">
-    <div class="subtitle is-2">Sample Title</div>
+    <div class="subtitle is-4">Sample Title</div>
+    <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Phasellus nec iaculis mauris. <a>@bulmaio</a>.
       <a href="#">#css</a> <a href="#">#responsive</a>
       <br>
       <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+    </p>
     </div>
+</div>
   </div>
 </div>
 
@@ -83,15 +75,18 @@
     </figure>
   </div>
   <div class="card-content">
-
+<div class="section">
     <div class="content">
-    <div class="subtitle is-2">Sample Title</div>
+    <div class="subtitle is-4">Sample Title</div>
+    <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Phasellus nec iaculis mauris. <a>@bulmaio</a>.
       <a href="#">#css</a> <a href="#">#responsive</a>
       <br>
       <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+    </p>
     </div>
+</div>
   </div>
 </div>
 
@@ -105,15 +100,18 @@
     </figure>
   </div>
   <div class="card-content">
-
+<div class="section">
     <div class="content">
-    <div class="subtitle is-2">Sample Title</div>
+    <div class="subtitle is-4">Sample Title</div>
+    <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Phasellus nec iaculis mauris. <a>@bulmaio</a>.
       <a href="#">#css</a> <a href="#">#responsive</a>
       <br>
       <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+    </p>
     </div>
+</div>
   </div>
 </div>
 

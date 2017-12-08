@@ -1,9 +1,9 @@
 @extends(Jarvis::views('layouts.users'))
 @section('content')
-<div class="columns">
+<div class="columns is-fluid">
 
 
-    <div class="column is-6 is-offset-3">
+    <div class="column is-6 is-offset-3-desktop">
 
         <div class="">
             <h1 class="subtitle is-1 has-text-centered is-uppercase">
@@ -38,7 +38,7 @@
                                 <button type="submit" class="button is-large is-info"> Login to your Account </button>
                             </div>
                             <div class="control">
-                                <a href="/register.html" class="button is-link is-large">Register</a>
+                                <a href="/jarvis/view/register" class="button is-link is-large">Register</a>
                             </div>
                         </div>
                         <p class="is-5">

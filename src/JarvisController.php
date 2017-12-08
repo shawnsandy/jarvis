@@ -6,10 +6,10 @@ class JarvisController extends Controller
 {
     public $views;
     public $resources;
-    public $read_me;
+    public $readme;
 
 
-    public function __construct() 
+    public function __construct()
     {
 
         $this->views = __DIR__."/resources/views";

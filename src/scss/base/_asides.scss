@@ -1,0 +1,43 @@
+.asides {
+    color: light;
+    .side-nav {
+        background-color: $dark;
+        height: 100vh;
+        color: $light;
+    }
+}
+
+@include mobile() {
+.asides {
+
+    .side-nav {
+        width: 100wh;
+    }
+
+}
+
+}
+
+@include tablet() {
+.asides {
+
+
+
+}
+
+}
+
+@include desktop() {
+.asides {
+
+    .side-nav {
+        width: 25%;
+        position: fixed;
+    }
+    main {
+
+    }
+
+}
+
+}

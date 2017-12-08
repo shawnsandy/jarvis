@@ -2,7 +2,7 @@
 
 return [
     "name" => "Jarvis",
-    "description" => "A simple theme management toolkit",
+    "description" => "A simple theme management toolkit for laravel",
     "version" => "0.1(alpha)",
     "validation_key" => env("VALIDATION_KEY", 00000000),
     "base_url" => "jarvis",
