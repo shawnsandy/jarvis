@@ -45,6 +45,20 @@ $theme_class = "front-page";
                     @include(jarvis_views("components.card"))
                 </div>
 
+                <div class="column is-4">
+                    @include(jarvis_views("components.card"))
+                </div>
+
+                <div class="column is-4">
+
+                    @include(jarvis_views("components.card"))
+                </div>
+
+                <div class="column is-4">
+
+                    @include(jarvis_views("components.card"))
+                </div>
+
             </div>
 
         </div>
