@@ -11,4 +11,10 @@ Created by PhpStorm.
 
 //
 
-Route::any("/view/{views?}/{page?}","\ShawnSandy\Jarvis\Controllers\PagesController");
+Route::any("/view/{views?}/{page?}", "\ShawnSandy\Jarvis\Controllers\PagesController");
+
+Route::group(['middleware' => ['auth']], function(){
+
+    Route::view('/dashboard', "jarvis::dashboard");
+
+});

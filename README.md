@@ -56,7 +56,11 @@ Route::group(['prefix' => config("jarvis.base_url")], function () {
 });
 ```
 
-* To install and publish theme files go to  `yourapp.com/jarvis/themes/index`, click on the `Lets get started` button. Enter the validation_key in the and hit `Publish Vendor files`. You should be set to go.
+
+
+* To install and publish theme files go to  `yourapp.com/jarvis/themes/index`, click on the `Lets get started` button.
+* Enter the validation_key in the and hit `Publish Vendor files`. You should be set to go.
+
 
 ![Alt text](/jarvis-setup.jpg?raw=true)
 

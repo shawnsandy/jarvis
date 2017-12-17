@@ -43,23 +43,23 @@
                                 <ul class="menu-list">
 
                                     <li>
-                                        <a href="/dashboard.html"><i class="im im-cubes"></i><span class="sidebar-text">Dash</span></a>
+                                        <a href="/jarvis/dashboard"><i class="im im-cubes"></i><span class="sidebar-text">Dash</span></a>
                                     </li>
 
                                     <li>
-                                        <a href="/dashboard.html"><i class="im im-note-o"></i><span class="sidebar-text">Posts</span></a>
+                                        <a href="/jarvis/dashboard"><i class="im im-note-o"></i><span class="sidebar-text">Posts</span></a>
                                     </li>
 
                                     <li>
-                                        <a href="/dashboard.html"><i class="im im-users"></i><span class="sidebar-text">Dashboard</span></a>
+                                        <a href="/jarvis/dashboard"><i class="im im-users"></i><span class="sidebar-text">Users</span></a>
                                     </li>
 
                                     <li>
-                                        <a href="/dashboard.html"><i class="im im-control-panel"></i><span class="sidebar-text">Options</span></a>
+                                        <a href="/jarvis/dashboard"><i class="im im-control-panel"></i><span class="sidebar-text">Options</span></a>
                                     </li>
 
                                     <li>
-                                        <a href="/dashboard.html"><i class="im im-gear"></i><span class="sidebar-text">Settings</span></a>
+                                        <a href="/jarvis/dashboard"><i class="im im-gear"></i><span class="sidebar-text">Settings</span></a>
                                     </li>
 
                                 </ul>

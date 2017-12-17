@@ -60,6 +60,7 @@ class JarvisThemesProvider extends ServiceProvider
         $this->themeSetup();
 
         $this->directives();
+
     }
 
 

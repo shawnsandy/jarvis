@@ -85,8 +85,8 @@
                 <div>
                 <div class="card-content">
                 <p class="subtitle is-3"><i class="im im-users"></i> User Roles</p>
-                @component("dashauth::forms.roles", [ "user" => Auth::user() ])
-                @slot('btn_class')  button is-info is-large is-uppercase  @endslot
+                @component("dashauth::partials.roles", [ "user" => Auth::user() ])
+                @slot('btn_class')  button is-info is-outlined is-uppercase  @endslot
                 @endcomponent
                 </div>
 
@@ -123,6 +123,10 @@
 
 		<div class="column is-3 sidebar-right">
 			<div class="cards">
+
+
+
+
 	<div class="card-content">
 		<div class="header">
 			<div class="subtitle is-3">
@@ -130,6 +134,10 @@
 			 Dashboard Sidebar
 			 </div>
 		</div>
+        <p class="subtitle is-3">
+                @component("dashauth::partials.roles", [ "user" => Auth::user() ])
+                @slot('btn_class')  button is-info is-outlined is-uppercase  @endslot
+                @endcomponent
 		<p class="class">
 			Quia ex et reprehenderit cum sit maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus deleniti
 			ex ut sint eveniet dicta similique aut neque unde dolorum nobis, quidem blanditiis impedit reiciendis consectetur eligendi

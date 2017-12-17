@@ -3,7 +3,7 @@ $theme_class = "front-page";
 @endphp
 @extends(jarvis_views('layouts.theme'))
 @section('content')
-@include(jarvis_views('components.cover'))
+@include(jarvis_views('components.landing-cover'))
 
 <section class="actions section is-medium">
 
@@ -32,31 +32,49 @@ $theme_class = "front-page";
             <div class="columns is-multiline">
 
                 <div class="column is-4">
-                    @include(jarvis_views("components.card"))
+                    <div class="box">
+                    <p class="subtitle is-4">Title</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, asperiores?</p>
+                    </div>
                 </div>
 
                 <div class="column is-4">
 
-                    @include(jarvis_views("components.card"))
+                    <div class="box">
+                    <p class="subtitle is-4">Title</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, asperiores?</p>
+                    </div>
                 </div>
 
                 <div class="column is-4">
 
-                    @include(jarvis_views("components.card"))
+                    <div class="box">
+                    <p class="subtitle is-4">Title</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, asperiores?</p>
+                    </div>
                 </div>
 
                 <div class="column is-4">
-                    @include(jarvis_views("components.card"))
+                    <div class="box">
+                    <p class="subtitle is-4">Title</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, asperiores?</p>
+                    </div>
                 </div>
 
                 <div class="column is-4">
 
-                    @include(jarvis_views("components.card"))
+                    <div class="box">
+                    <p class="subtitle is-4">Title</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, asperiores?</p>
+                    </div>
                 </div>
 
                 <div class="column is-4">
 
-                    @include(jarvis_views("components.card"))
+                    <div class="box">
+                    <p class="subtitle is-4">Title</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, asperiores?</p>
+                    </div>
                 </div>
 
             </div>
@@ -68,10 +86,10 @@ $theme_class = "front-page";
 
 </section>
 
-<main class="section is-medium">
+<main class="section is-medium content">
     <div class="container">
-        <div class="columns">
-            <div class="column is-three-quarters">
+        <div class="columns is-multiline">
+            <div class="column is-6">
                 <h2 data-module="example" class="article article-h1">
                     Blendid!
                 </h2>
@@ -81,16 +99,52 @@ $theme_class = "front-page";
                     aliquam non. Perspiciatis!
                 </p>
                 <p>
-                    Lorem lipsum
+                    <a href="" class="button">Read More</a>
                 </p>
             </div>
-            <div class="column">
-                <h3 class="article article-h3">Sidebar</h3>
-                <p class="lorem">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+            <div class="column is-6">
+                <h2 data-module="example" class="article article-h1">
+                    Blendid!
+                </h2>
+                <p class="">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos tenetur assumenda quaerat quam possimus laudantium
+                    perferendis cum, iusto debitis delectus molestiae officiis atque, consequuntur! Temporibus saepe quis
+                    aliquam non. Perspiciatis!
+                </p>
+                <p>
+                    <a href="" class="button">Read More</a>
                 </p>
             </div>
+
+            <div class="column is-6">
+                <h2 data-module="example" class="article article-h1">
+                    Blendid!
+                </h2>
+                <p class="">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos tenetur assumenda quaerat quam possimus laudantium
+                    perferendis cum, iusto debitis delectus molestiae officiis atque, consequuntur! Temporibus saepe quis
+                    aliquam non. Perspiciatis!
+                </p>
+                <p>
+                    <a href="" class="button">Read More</a>
+                </p>
+            </div>
+
+            <div class="column is-6">
+                <h2 data-module="example" class="article article-h1">
+                    Blendid!
+                </h2>
+                <p class="">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos tenetur assumenda quaerat quam possimus laudantium
+                    perferendis cum, iusto debitis delectus molestiae officiis atque, consequuntur! Temporibus saepe quis
+                    aliquam non. Perspiciatis!
+                </p>
+                <p>
+                    <a href="" class="button">Read More</a>
+                </p>
+            </div>
+
         </div>
     </div>
 </main>
