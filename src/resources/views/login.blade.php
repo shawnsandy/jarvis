@@ -11,7 +11,8 @@
             </h1>
             <div class="box">
                 <div class="section">
-                    <form data-validate action="login-form">
+                    <form data-validate action="{{ url('login') }}" method="POST">
+                    {{ csrf_field() }}
                         <div class="field">
                             <label class="label">Account Email</label>
                             <div class="control">
@@ -42,7 +43,7 @@
                             </div>
                         </div>
                         <p class="is-5">
-                            <a href="">Forgot your password</a>
+                            <a href="{{ url("password/reset") }}">Forgot your password</a>
                         </p>
                     </form>
                 </div>
