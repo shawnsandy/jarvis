@@ -46,9 +46,14 @@
                 </div>
                 <div class="column">
                     <p class="title is-4 is-uppercase">Recent Articles</p>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <p>Id saepe ratione corrupti natus iste.</p>
+                    <p>Vero quam porro maxime quae sed?</p>
+                    <p>Incidunt fuga non harum sequi ad.</p>
                 </div>
                 <div class="column">
                     <p class="title is-4 is-uppercase">Acme Inc</p>
+                    <p class="is-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nisi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, at.</p>
                 </div>
                 <div class="column">
                     <p class="title is-4 is-uppercase">Contact us</p>
