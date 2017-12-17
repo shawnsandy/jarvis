@@ -12,7 +12,8 @@
             </h1>
             <div class="box">
                 <div class="section">
-                    <form data-validate action="login-form">
+                    <form data-validate action="{{ url("register") }}" method="POST">
+                    {{ csrf_field() }}
                         <div class="field">
                             <label class="label">Full Name</label>
                             <div class="control">
