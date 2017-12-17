@@ -18,9 +18,9 @@
 @push('styles')
 <style>
 .cover-fold {
-    background-image: url("https://source.unsplash.com/KuvEVL7lXYQ/1800x1200" );
-    background-size: cover;
-    background-position: center center;
+ // background-image: url("https://source.unsplash.com/KuvEVL7lXYQ/1800x1200" );
+   // background-size: cover;
+   // background-position: center center;
 }
 </style>
 @endpush
