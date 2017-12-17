@@ -85,9 +85,7 @@
                 <div>
                 <div class="card-content">
                 <p class="subtitle is-3"><i class="im im-users"></i> User Roles</p>
-                @component("dashauth::forms.roles", [ "user" => Auth::user() ])
-                @slot('btn_class')  button is-info is-large is-uppercase  @endslot
-                @endcomponent
+
                 </div>
 
                 {{--  <div class="card-content">
