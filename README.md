@@ -55,6 +55,20 @@ Route::group(['prefix' => config("jarvis.base_url")], function () {
     Jarvis::routes();
 });
 ```
+Optional routes
+
+``` php
+Route::get('/', function () {
+    return view(jarvis_views("index"), ["theme_class" => "front-page"]);
+});
+
+Route::get('/signin', function(){
+    return view(jarvis_views("login"));
+});
+
+Route::get('/signup', function(){
+    return view(jarvis_views('register'));
+```
 
 
 
