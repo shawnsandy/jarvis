@@ -68,6 +68,12 @@ Route::get('/signin', function(){
 
 Route::get('/signup', function(){
     return view(jarvis_views('register'));
+});
+
+Route::get('/reset-password', function(){
+    return view(jarvis_views('reset'));
+});
+
 ```
 
 
