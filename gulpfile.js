@@ -23,7 +23,8 @@ var reports = require("gulp-sizereport");
 
 /**
  * process files sass
- * */
+ *
+ **/
 gulp.task("sass", function() {
   return gulp
     .src("./src/scss/**/*.scss", { base: "./src/scss/" })
@@ -47,7 +48,7 @@ gulp.task("sass", function() {
  * run sass task on change
  */
 gulp.task("sass:watch", function() {
-  gulp.watch("./src/scss", ["sass"]);
+  gulp.watch("./src/scss/**/*.scss", ["sass"]);
 });
 
 gulp.task("clone:frontend", function() {

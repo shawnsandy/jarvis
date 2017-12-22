@@ -104,32 +104,36 @@ $theme_class = "front-page";
 
             <div class="column">
 
-                <div class="collection">
-                    <p class="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
-                    </p>
-                </div>
-                <div class="collection">
-                    <p class="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
-                    </p>
-                </div>
-                <div class="collection">
-                    <p class="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
-                    </p>
-                </div>
-                <div class="collection">
-                    <p class="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
-                    </p>
-                </div>
-                <div class="collection">
-                    <p class="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
-                    </p>
-                </div>
+                <div class="collections">
 
+
+                    <div class="collection">
+                        <p class="">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
+                        </p>
+                    </div>
+                    <div class="collection">
+                        <p class="">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
+                        </p>
+                    </div>
+                    <div class="collection">
+                        <p class="">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
+                        </p>
+                    </div>
+                    <div class="collection">
+                        <p class="">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
+                        </p>
+                    </div>
+                    <div class="collection">
+                        <p class="">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
+                        </p>
+                    </div>
+
+                </div>
             </div>
 
         </div>

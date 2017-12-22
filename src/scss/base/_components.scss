@@ -1,4 +1,4 @@
-.cover-fold {
+.co.cover-fold {
     background-color: $night-shade;
     background-size: cover;
     background-repeat: no-repeat;
@@ -87,10 +87,14 @@
     }
 }
 
+.collections {
+    border: 1px solid lightgray;
+}
+
 .collection {
-    margin: 5px 0;
+    //margin: 5px 0;
     padding: 20px;
-    @include box();
+
     p {
         @include font-size(1.4);
         margin-bottom: 0;
@@ -127,6 +131,7 @@
             @include font-size(1.8);
         }
     }
+
 }
 
 .cards {
