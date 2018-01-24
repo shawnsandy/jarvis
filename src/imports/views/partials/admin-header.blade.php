@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/jarvis/css/app-e787fe0d66.css">
   <link rel="stylesheet" href="/jarvis/css/demo-b6a6c8cd86.css">
 
-  <link rel="stylesheet" href="/jarvis/css/theme-e0b0d860a2.css">
+  <link rel="stylesheet" href="/jarvis/css/theme-8a58650ca0.css">
 
  <link rel="stylesheet" href="/jarvis/css/admin-eab8dbe2c6.css">
 
