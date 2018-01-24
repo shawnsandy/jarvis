@@ -16,8 +16,7 @@
         </div>
     </div>
 </section>
-
-<section class="actions section is-medium">
+ <section class="actions section is-medium">
 
     <div class="container">
         <div class="columns">
@@ -161,33 +160,34 @@
         <div class="columns">
 
             <div class="column">
+                <div class="collections">
+                    <div class="collection">
+                        <p class="">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
+                        </p>
+                    </div>
+                    <div class="collection">
+                        <p class="">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
+                        </p>
+                    </div>
+                    <div class="collection">
+                        <p class="">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
+                        </p>
+                    </div>
+                    <div class="collection">
+                        <p class="">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
+                        </p>
+                    </div>
+                    <div class="collection">
+                        <p class="">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
+                        </p>
+                    </div>
 
-                <div class="collection">
-                    <p class="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
-                    </p>
                 </div>
-                <div class="collection">
-                    <p class="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
-                    </p>
-                </div>
-                <div class="collection">
-                    <p class="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
-                    </p>
-                </div>
-                <div class="collection">
-                    <p class="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
-                    </p>
-                </div>
-                <div class="collection">
-                    <p class="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, porro?
-                    </p>
-                </div>
-
             </div>
 
         </div>
@@ -210,8 +210,8 @@
             </div>
 
 
-                <div class="column">
-                    <div class="cards">
+            <div class="column">
+                <div class="cards">
 	<div class="card-content">
 		<p class="class">
 			Quia ex et reprehenderit cum sit maxime.
@@ -219,7 +219,7 @@
 	</div>
 </div>
 
-                </div>
+            </div>
 
 
 
